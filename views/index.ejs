@@ -1,0 +1,558 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>البحث في تفريغ المحاضرات</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;600;700&family=Scheherazade+New:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --primary-dark: #2c1810;
+        --accent-gold: #c19a6b;
+        --accent-amber: #d4a574;
+        --cream: #f5ebe0;
+        --paper: #faf7f2;
+        --text-primary: #2c1810;
+        --text-muted: #8b7355;
+        --border-light: #e8dcc8;
+        --shadow-warm: rgba(92, 64, 51, 0.15);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Noto Naskh Arabic", serif;
+        background: var(--paper);
+        color: var(--text-primary);
+        line-height: 1.9;
+        direction: rtl;
+        padding-bottom: 130px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Scheherazade New", serif;
+        font-weight: 700;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      .header {
+        background: linear-gradient(135deg, #2c1810 0%, #3d2419 100%);
+        border-bottom: 3px solid var(--accent-gold);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 12px var(--shadow-warm);
+      }
+
+      .header-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 14px 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+      }
+
+      .logo {
+        color: var(--paper);
+        text-decoration: none;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .logo-text {
+        font-family: "Scheherazade New", serif;
+        font-size: 24px;
+        font-weight: 700;
+      }
+
+      .nav-desktop {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .nav-link {
+        color: var(--cream);
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      .nav-link:hover {
+        color: var(--accent-gold);
+      }
+
+      .hamburger-btn {
+        display: none;
+        width: 42px;
+        height: 42px;
+        border-radius: 8px;
+        border: 2px solid var(--accent-gold);
+        background: rgba(193, 154, 107, 0.15);
+        color: var(--accent-gold);
+        font-size: 22px;
+        line-height: 1;
+        cursor: pointer;
+      }
+
+      .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: linear-gradient(180deg, #2c1810 0%, #3d2419 100%);
+        z-index: 1001;
+        transition: right 0.25s ease;
+        padding-top: 78px;
+      }
+
+      .mobile-nav.active {
+        right: 0;
+      }
+
+      .mobile-nav a {
+        display: block;
+        padding: 14px 18px;
+        color: var(--cream);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(245, 235, 224, 0.18);
+      }
+
+      .mobile-nav-backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.45);
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.25s ease;
+      }
+
+      .mobile-nav-backdrop.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .search-hero {
+        background: linear-gradient(180deg, #5c4033 0%, #8b9d83 100%);
+        padding: 44px 16px;
+        text-align: center;
+        border-bottom: 4px solid var(--accent-gold);
+        position: relative;
+      }
+
+      .search-hero::before {
+        content: "﷽";
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 170px;
+        color: rgba(255, 255, 255, 0.04);
+        pointer-events: none;
+      }
+
+      .search-hero h1,
+      .search-hero p {
+        position: relative;
+      }
+
+      .search-hero h1 {
+        color: var(--paper);
+        font-size: clamp(30px, 5vw, 44px);
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+      }
+
+      .search-hero p {
+        margin-top: 8px;
+        color: #f8ead8;
+      }
+
+      .search-shell {
+        max-width: 980px;
+        margin: 28px auto 42px;
+        padding: 0 16px 120px;
+      }
+
+      form {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
+
+      input[type="text"] {
+        flex: 1;
+        padding: 16px 18px;
+        border: 3px solid var(--accent-gold);
+        border-radius: 12px;
+        background: var(--cream);
+        color: var(--text-primary);
+        font-size: 18px;
+        box-shadow: 0 8px 24px var(--shadow-warm);
+      }
+
+      input[type="text"]:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(193, 154, 107, 0.3), 0 8px 24px var(--shadow-warm);
+      }
+
+      button {
+        border: none;
+        border-radius: 10px;
+        padding: 14px 26px;
+        background: var(--accent-gold);
+        color: var(--primary-dark);
+        font-size: 16px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: var(--accent-amber);
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      li {
+        background: var(--cream);
+        border: 3px solid #d4a574;
+        border-radius: 16px;
+        margin-bottom: 16px;
+        padding: 20px;
+        box-shadow: 0 6px 16px var(--shadow-warm);
+        position: relative;
+      }
+
+      li::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 6px;
+        background: linear-gradient(180deg, #c19a6b 0%, #d4a574 100%);
+      }
+
+      li strong {
+        display: block;
+        font-family: "Scheherazade New", serif;
+        font-size: 28px;
+        color: var(--text-primary);
+        margin-bottom: 6px;
+        padding-left: 12px;
+      }
+
+      li p {
+        padding-left: 12px;
+      }
+
+      .muted {
+        color: var(--text-muted);
+      }
+
+      .error {
+        margin-bottom: 12px;
+        color: #b42318;
+        font-weight: 700;
+      }
+
+      .play-from {
+        margin-top: 8px;
+      }
+
+      .player-wrap {
+        background: #fffdf8;
+        border: 2px solid var(--border-light);
+        border-radius: 12px;
+        padding: 10px;
+        box-shadow: 0 8px 20px var(--shadow-warm);
+        position: fixed;
+        z-index: 1200;
+        bottom: 12px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: min(980px, calc(100% - 28px));
+        display: none;
+      }
+
+      .player-wrap.active {
+        display: block;
+      }
+
+      audio {
+        width: 100%;
+        border-radius: 8px;
+      }
+
+      .footer {
+        background: linear-gradient(135deg, #2c1810 0%, #3d2419 100%);
+        color: var(--cream);
+        border-top: 3px solid var(--accent-gold);
+        margin-top: 40px;
+      }
+
+      .footer-content {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr 1fr;
+        gap: 24px;
+        padding: 28px 0 16px;
+      }
+
+      .footer h3 {
+        color: var(--accent-gold);
+        margin-bottom: 10px;
+        font-size: 24px;
+      }
+
+      .footer li {
+        background: none;
+        border: none;
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .footer li::before {
+        display: none;
+      }
+
+      .footer a {
+        color: var(--cream);
+        text-decoration: none;
+      }
+
+      .footer a:hover {
+        color: var(--accent-gold);
+      }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(245, 235, 224, 0.2);
+        text-align: center;
+        padding: 14px 0 18px;
+        font-size: 14px;
+        color: #d9c7ae;
+      }
+
+      @media (max-width: 900px) {
+        .nav-desktop {
+          display: none;
+        }
+
+        .hamburger-btn {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .footer-content {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 720px) {
+        .container {
+          padding: 0 16px;
+        }
+
+        form {
+          flex-direction: column;
+        }
+
+        button {
+          width: 100%;
+        }
+
+        .logo-text {
+          font-size: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <a href="/" class="logo">
+          <span class="logo-text">موقع الشيخ حسن بن محمد منصور الدغريري</span>
+        </a>
+
+        <nav class="nav-desktop">
+          <a href="/" class="nav-link">الرئيسية</a>
+          <a href="https://wurud.onrender.com/browse" class="nav-link" target="_blank" rel="noopener noreferrer">جميع المحاضرات</a>
+          <a href="https://wurud.onrender.com/series" class="nav-link" target="_blank" rel="noopener noreferrer">السلاسل</a>
+          <a href="https://wurud.onrender.com/sheikhs/حسن-بن-محمد-منصور-الدغريري" class="nav-link" target="_blank" rel="noopener noreferrer">السيرة الذاتية</a>
+        </nav>
+
+        <button id="menuToggle" class="hamburger-btn" aria-label="القائمة">☰</button>
+      </div>
+    </header>
+
+    <div id="mobileNav" class="mobile-nav">
+      <a href="/">الرئيسية</a>
+      <a href="https://wurud.onrender.com/browse" target="_blank" rel="noopener noreferrer">جميع المحاضرات</a>
+      <a href="https://wurud.onrender.com/series" target="_blank" rel="noopener noreferrer">السلاسل</a>
+      <a href="https://wurud.onrender.com/sheikhs/حسن-بن-محمد-منصور-الدغريري" target="_blank" rel="noopener noreferrer">السيرة الذاتية</a>
+    </div>
+    <div id="mobileNavBackdrop" class="mobile-nav-backdrop"></div>
+
+    <main>
+      <section class="search-hero">
+        <h1>البحث في التفريغ الصوتي</h1>
+        <p>اكتب كلمة أو عبارة وسنأخذك لنفس اللحظة داخل التسجيل</p>
+      </section>
+
+      <div class="search-shell">
+        <form action="/search" method="GET">
+          <input
+            type="text"
+            name="q"
+            value="<%= query %>"
+            placeholder="اكتب كلمة للبحث..."
+            required
+          />
+          <button type="submit">بحث</button>
+        </form>
+
+        <% if (searched && !error && results.length === 0) { %>
+        <p class="muted">ما لقينا نتائج لهذا البحث.</p>
+        <% } %>
+
+        <% if (error) { %>
+        <p class="error"><%= error %></p>
+        <% } %>
+
+        <%
+          function toPlaybackSeconds(value) {
+            const raw = Number(value || 0);
+            if (!Number.isFinite(raw) || raw < 0) return 0;
+            return raw > 100000 ? raw / 1000 : raw;
+          }
+
+          function formatDuration(value) {
+            const totalSeconds = Math.floor(toPlaybackSeconds(value));
+            const hours = Math.floor(totalSeconds / 3600);
+            const minutes = Math.floor((totalSeconds % 3600) / 60);
+            const seconds = totalSeconds % 60;
+
+            if (hours > 0) {
+              return `${hours}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+            }
+
+            return `${minutes}:${String(seconds).padStart(2, "0")}`;
+          }
+        %>
+
+        <ul>
+          <% results.forEach((result) => { %>
+          <li>
+            <strong><%= result.lectureTitleArabic %></strong>
+            <p><%= result.text %></p>
+            <p class="muted">
+              المتحدث: <%= result.speaker || "غير معروف" %> | التوقيت:
+              <%= formatDuration(result.startTimeSec) %>
+            </p>
+            <button
+              type="button"
+              class="play-from"
+              data-url="<%= result.audioUrl %>"
+              data-seconds="<%= toPlaybackSeconds(result.startTimeSec) %>"
+            >
+              تشغيل من هنا
+            </button>
+          </li>
+          <% }) %>
+        </ul>
+
+        <div class="player-wrap">
+          <audio id="audioPlayer" controls></audio>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div>
+            <h3>عن الشيخ</h3>
+            <p>
+              الشيخ حسن بن محمد الدغريري، تلميذ الشيخ أحمد النجمي والشيخ زيد المدخلي رحمهما الله.
+              يلقي دروسه في جامع الورود بجدة.
+            </p>
+          </div>
+          <div>
+            <h3>روابط سريعة</h3>
+            <ul>
+              <li><a href="/">صفحة البحث</a></li>
+              <li><a href="https://wurud.onrender.com/browse" target="_blank" rel="noopener noreferrer">جميع المحاضرات</a></li>
+              <li><a href="https://wurud.onrender.com/series" target="_blank" rel="noopener noreferrer">السلاسل</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>التواصل</h3>
+            <ul>
+              <li><a href="https://t.me/daririhasan" target="_blank" rel="noopener noreferrer">تيليجرام</a></li>
+              <li><a href="mailto:emah84@gmail.com">emah84@gmail.com</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          © 2026 جميع الحقوق محفوظة للشيخ حسن بن محمد منصور الدغريري
+        </div>
+      </div>
+    </footer>
+
+    <script src="/client.js"></script>
+    <script>
+      (function () {
+        const menuToggle = document.getElementById("menuToggle");
+        const mobileNav = document.getElementById("mobileNav");
+        const backdrop = document.getElementById("mobileNavBackdrop");
+
+        function closeMenu() {
+          mobileNav.classList.remove("active");
+          backdrop.classList.remove("active");
+          document.body.style.overflow = "";
+        }
+
+        if (!menuToggle || !mobileNav || !backdrop) return;
+
+        menuToggle.addEventListener("click", function () {
+          const open = mobileNav.classList.toggle("active");
+          backdrop.classList.toggle("active", open);
+          document.body.style.overflow = open ? "hidden" : "";
+        });
+
+        backdrop.addEventListener("click", closeMenu);
+
+        mobileNav.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", closeMenu);
+        });
+      })();
+    </script>
+  </body>
+</html>
+

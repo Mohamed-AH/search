@@ -1,0 +1,5 @@
+transcripts/
+reports/
+data-export.txt
+*.csv
+.env.local

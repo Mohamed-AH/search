@@ -1,0 +1,29 @@
+# Node
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.*
+
+# Vercel
+.vercel/
+.vercel-upload.tgz
+
+# Local
+*.log
+
+# Data files
+transcripts/
+reports/
+data-export.txt
+*.csv

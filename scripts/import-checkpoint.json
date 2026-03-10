@@ -1,0 +1,1308 @@
+{
+  "createdAt": "2026-03-09T11:26:27.803Z",
+  "updatedAt": "2026-03-09T12:06:53.977Z",
+  "processed": {
+    "02.lite.csv": {
+      "status": "success",
+      "shortId": 224,
+      "transcriptsInserted": 490,
+      "startedAt": "2026-03-09T11:26:29.652Z",
+      "finishedAt": "2026-03-09T11:26:29.993Z"
+    },
+    "03.lite.csv": {
+      "status": "success",
+      "shortId": 225,
+      "transcriptsInserted": 760,
+      "startedAt": "2026-03-09T11:26:30.022Z",
+      "finishedAt": "2026-03-09T11:26:30.292Z"
+    },
+    "AUD-20250901-WA0001.csv": {
+      "status": "success",
+      "shortId": 172,
+      "transcriptsInserted": 618,
+      "startedAt": "2026-03-09T11:26:30.302Z",
+      "finishedAt": "2026-03-09T11:26:30.548Z"
+    },
+    "AUD-20250903-WA0000.csv": {
+      "status": "success",
+      "shortId": 202,
+      "transcriptsInserted": 108,
+      "startedAt": "2026-03-09T11:26:30.557Z",
+      "finishedAt": "2026-03-09T11:26:30.748Z"
+    },
+    "AUD-20251012-WA0011.csv": {
+      "status": "success",
+      "shortId": 178,
+      "transcriptsInserted": 573,
+      "startedAt": "2026-03-09T11:26:30.759Z",
+      "finishedAt": "2026-03-09T11:26:32.000Z"
+    },
+    "AUD-20251012-WA0020.csv": {
+      "status": "success",
+      "shortId": 122,
+      "transcriptsInserted": 259,
+      "startedAt": "2026-03-09T11:26:32.004Z",
+      "finishedAt": "2026-03-09T11:26:32.193Z"
+    },
+    "AUD-20251012-WA0033.csv": {
+      "status": "success",
+      "shortId": 165,
+      "transcriptsInserted": 350,
+      "startedAt": "2026-03-09T11:26:32.204Z",
+      "finishedAt": "2026-03-09T11:26:32.404Z"
+    },
+    "AUD-20251012-WA0037.csv": {
+      "status": "success",
+      "shortId": 181,
+      "transcriptsInserted": 448,
+      "startedAt": "2026-03-09T11:26:32.407Z",
+      "finishedAt": "2026-03-09T11:26:32.607Z"
+    },
+    "AUD-20251015-WA0055.csv": {
+      "status": "success",
+      "shortId": 166,
+      "transcriptsInserted": 643,
+      "startedAt": "2026-03-09T11:26:32.611Z",
+      "finishedAt": "2026-03-09T11:26:32.823Z"
+    },
+    "AUD-20251017-WA0000.csv": {
+      "status": "success",
+      "shortId": 123,
+      "transcriptsInserted": 144,
+      "startedAt": "2026-03-09T11:26:32.826Z",
+      "finishedAt": "2026-03-09T11:26:33.009Z"
+    },
+    "AUD-20251021-WA0026.csv": {
+      "status": "success",
+      "shortId": 183,
+      "transcriptsInserted": 477,
+      "startedAt": "2026-03-09T11:26:33.019Z",
+      "finishedAt": "2026-03-09T11:26:33.228Z"
+    },
+    "AUD-20251021-WA0036.csv": {
+      "status": "success",
+      "shortId": 184,
+      "transcriptsInserted": 458,
+      "startedAt": "2026-03-09T11:26:33.239Z",
+      "finishedAt": "2026-03-09T11:26:33.465Z"
+    },
+    "AUD-20251021-WA0054.csv": {
+      "status": "success",
+      "shortId": 207,
+      "transcriptsInserted": 790,
+      "startedAt": "2026-03-09T11:26:33.475Z",
+      "finishedAt": "2026-03-09T11:26:33.693Z"
+    },
+    "AUD-20251022-WA0024.csv": {
+      "status": "success",
+      "shortId": 167,
+      "transcriptsInserted": 449,
+      "startedAt": "2026-03-09T11:26:33.697Z",
+      "finishedAt": "2026-03-09T11:26:33.894Z"
+    },
+    "AUD-20251026-WA0003.csv": {
+      "status": "success",
+      "shortId": 124,
+      "transcriptsInserted": 150,
+      "startedAt": "2026-03-09T11:26:33.901Z",
+      "finishedAt": "2026-03-09T11:26:34.082Z"
+    },
+    "AUD-20251026-WA0007.csv": {
+      "status": "success",
+      "shortId": 182,
+      "transcriptsInserted": 148,
+      "startedAt": "2026-03-09T11:26:34.091Z",
+      "finishedAt": "2026-03-09T11:26:34.262Z"
+    },
+    "AUD-20251028-WA0003.csv": {
+      "status": "success",
+      "shortId": 208,
+      "transcriptsInserted": 453,
+      "startedAt": "2026-03-09T11:26:34.270Z",
+      "finishedAt": "2026-03-09T11:26:34.464Z"
+    },
+    "AUD-20251029-WA0000.csv": {
+      "status": "success",
+      "shortId": 185,
+      "transcriptsInserted": 550,
+      "startedAt": "2026-03-09T11:26:34.475Z",
+      "finishedAt": "2026-03-09T11:26:34.685Z"
+    },
+    "AUD-20251029-WA0002.csv": {
+      "status": "success",
+      "shortId": 35,
+      "transcriptsInserted": 334,
+      "startedAt": "2026-03-09T11:26:34.690Z",
+      "finishedAt": "2026-03-09T11:26:34.880Z"
+    },
+    "AUD-20251029-WA0004.csv": {
+      "status": "success",
+      "shortId": 65,
+      "transcriptsInserted": 83,
+      "startedAt": "2026-03-09T11:26:34.886Z",
+      "finishedAt": "2026-03-09T11:26:35.070Z"
+    },
+    "AUD-20251104-WA0000.csv": {
+      "status": "success",
+      "shortId": 66,
+      "transcriptsInserted": 138,
+      "startedAt": "2026-03-09T11:26:35.101Z",
+      "finishedAt": "2026-03-09T11:26:35.362Z"
+    },
+    "AUD-20251111-WA0001.csv": {
+      "status": "success",
+      "shortId": 150,
+      "transcriptsInserted": 707,
+      "startedAt": "2026-03-09T11:26:35.370Z",
+      "finishedAt": "2026-03-09T11:26:35.614Z"
+    },
+    "AUD-20251127-WA0003.csv": {
+      "status": "success",
+      "shortId": 186,
+      "transcriptsInserted": 229,
+      "startedAt": "2026-03-09T11:26:35.624Z",
+      "finishedAt": "2026-03-09T11:26:35.850Z"
+    },
+    "AUD-20251129-WA0010.csv": {
+      "status": "success",
+      "shortId": 187,
+      "transcriptsInserted": 660,
+      "startedAt": "2026-03-09T11:26:35.861Z",
+      "finishedAt": "2026-03-09T11:26:36.104Z"
+    },
+    "AUD-20251129-WA0017.csv": {
+      "status": "success",
+      "shortId": 110,
+      "transcriptsInserted": 699,
+      "startedAt": "2026-03-09T11:26:36.109Z",
+      "finishedAt": "2026-03-09T11:26:36.332Z"
+    },
+    "AUD-20251130-WA0012.csv": {
+      "status": "success",
+      "shortId": 91,
+      "transcriptsInserted": 87,
+      "startedAt": "2026-03-09T11:26:36.342Z",
+      "finishedAt": "2026-03-09T11:26:36.535Z"
+    },
+    "AUD-20251201-WA0005.csv": {
+      "status": "success",
+      "shortId": 144,
+      "transcriptsInserted": 114,
+      "startedAt": "2026-03-09T11:26:36.544Z",
+      "finishedAt": "2026-03-09T11:26:36.729Z"
+    },
+    "AUD-20251202-WA0001.csv": {
+      "status": "success",
+      "shortId": 111,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-09T11:26:36.735Z",
+      "finishedAt": "2026-03-09T11:26:36.866Z"
+    },
+    "AUD-20251202-WA0002.csv": {
+      "status": "success",
+      "shortId": 112,
+      "transcriptsInserted": 925,
+      "startedAt": "2026-03-09T11:26:36.871Z",
+      "finishedAt": "2026-03-09T11:26:37.113Z"
+    },
+    "AUD-20251202-WA0007.csv": {
+      "status": "success",
+      "shortId": 190,
+      "transcriptsInserted": 468,
+      "startedAt": "2026-03-09T11:26:37.122Z",
+      "finishedAt": "2026-03-09T11:26:37.343Z"
+    },
+    "AUD-20251204-WA0005.csv": {
+      "status": "success",
+      "shortId": 191,
+      "transcriptsInserted": 322,
+      "startedAt": "2026-03-09T11:26:37.348Z",
+      "finishedAt": "2026-03-09T11:26:37.559Z"
+    },
+    "AUD-20251208-WA0001.csv": {
+      "status": "success",
+      "shortId": 113,
+      "transcriptsInserted": 513,
+      "startedAt": "2026-03-09T11:26:37.567Z",
+      "finishedAt": "2026-03-09T11:26:37.785Z"
+    },
+    "AUD-20251208-WA0004.csv": {
+      "status": "success",
+      "shortId": 152,
+      "transcriptsInserted": 684,
+      "startedAt": "2026-03-09T11:26:37.796Z",
+      "finishedAt": "2026-03-09T11:26:38.020Z"
+    },
+    "AUD-20251208-WA0005.csv": {
+      "status": "success",
+      "shortId": 153,
+      "transcriptsInserted": 978,
+      "startedAt": "2026-03-09T11:26:38.029Z",
+      "finishedAt": "2026-03-09T11:26:38.293Z"
+    },
+    "AUD-20251208-WA0006.csv": {
+      "status": "success",
+      "shortId": 41,
+      "transcriptsInserted": 149,
+      "startedAt": "2026-03-09T11:26:38.303Z",
+      "finishedAt": "2026-03-09T11:26:38.492Z"
+    },
+    "AUD-20251208-WA0007.csv": {
+      "status": "success",
+      "shortId": 13,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-09T11:26:38.503Z",
+      "finishedAt": "2026-03-09T11:26:38.636Z"
+    },
+    "AUD-20251208-WA0009.csv": {
+      "status": "success",
+      "shortId": 42,
+      "transcriptsInserted": 25,
+      "startedAt": "2026-03-09T11:26:38.642Z",
+      "finishedAt": "2026-03-09T11:26:38.812Z"
+    },
+    "AUD-20251208-WA0010.csv": {
+      "status": "success",
+      "shortId": 43,
+      "transcriptsInserted": 326,
+      "startedAt": "2026-03-09T11:26:38.821Z",
+      "finishedAt": "2026-03-09T11:26:39.002Z"
+    },
+    "AUD-20251208-WA0011.csv": {
+      "status": "success",
+      "shortId": 168,
+      "transcriptsInserted": 677,
+      "startedAt": "2026-03-09T11:38:49.650Z",
+      "finishedAt": "2026-03-09T11:38:50.006Z"
+    },
+    "AUD-20251209-WA0004.csv": {
+      "status": "success",
+      "shortId": 92,
+      "transcriptsInserted": 54,
+      "startedAt": "2026-03-09T11:38:50.016Z",
+      "finishedAt": "2026-03-09T11:38:50.200Z"
+    },
+    "AUD-20251209-WA0005.csv": {
+      "status": "success",
+      "shortId": 104,
+      "transcriptsInserted": 1017,
+      "startedAt": "2026-03-09T11:38:50.206Z",
+      "finishedAt": "2026-03-09T11:38:50.544Z"
+    },
+    "AUD-20251211-WA0003.csv": {
+      "status": "success",
+      "shortId": 68,
+      "transcriptsInserted": 306,
+      "startedAt": "2026-03-09T11:38:50.550Z",
+      "finishedAt": "2026-03-09T11:38:50.751Z"
+    },
+    "AUD-20251211-WA0007.csv": {
+      "status": "success",
+      "shortId": 70,
+      "transcriptsInserted": 148,
+      "startedAt": "2026-03-09T11:38:50.759Z",
+      "finishedAt": "2026-03-09T11:38:50.952Z"
+    },
+    "AUD-20251212-WA0000.csv": {
+      "status": "success",
+      "shortId": 44,
+      "transcriptsInserted": 162,
+      "startedAt": "2026-03-09T11:38:50.961Z",
+      "finishedAt": "2026-03-09T11:38:51.152Z"
+    },
+    "AUD-20251213-WA0001.csv": {
+      "status": "success",
+      "shortId": 10,
+      "transcriptsInserted": 856,
+      "startedAt": "2026-03-09T11:38:51.163Z",
+      "finishedAt": "2026-03-09T11:38:51.400Z"
+    },
+    "AUD-20251213-WA0002.csv": {
+      "status": "success",
+      "shortId": 173,
+      "transcriptsInserted": 827,
+      "startedAt": "2026-03-09T11:38:51.412Z",
+      "finishedAt": "2026-03-09T11:38:51.657Z"
+    },
+    "AUD-20251213-WA0003.csv": {
+      "status": "success",
+      "shortId": 188,
+      "transcriptsInserted": 408,
+      "startedAt": "2026-03-09T11:38:51.668Z",
+      "finishedAt": "2026-03-09T11:38:51.900Z"
+    },
+    "AUD-20251213-WA0004.csv": {
+      "status": "success",
+      "shortId": 193,
+      "transcriptsInserted": 1115,
+      "startedAt": "2026-03-09T11:38:51.906Z",
+      "finishedAt": "2026-03-09T11:38:52.183Z"
+    },
+    "AUD-20251213-WA0005.csv": {
+      "status": "success",
+      "shortId": 189,
+      "transcriptsInserted": 266,
+      "startedAt": "2026-03-09T11:38:52.186Z",
+      "finishedAt": "2026-03-09T11:38:52.372Z"
+    },
+    "AUD-20251213-WA0006.csv": {
+      "status": "success",
+      "shortId": 192,
+      "transcriptsInserted": 322,
+      "startedAt": "2026-03-09T11:38:52.379Z",
+      "finishedAt": "2026-03-09T11:38:52.572Z"
+    },
+    "AUD-20251213-WA0007.csv": {
+      "status": "success",
+      "shortId": 201,
+      "transcriptsInserted": 298,
+      "startedAt": "2026-03-09T11:38:52.583Z",
+      "finishedAt": "2026-03-09T11:38:52.779Z"
+    },
+    "AUD-20251213-WA0008.csv": {
+      "status": "success",
+      "shortId": 204,
+      "transcriptsInserted": 393,
+      "startedAt": "2026-03-09T11:38:52.784Z",
+      "finishedAt": "2026-03-09T11:38:52.977Z"
+    },
+    "AUD-20251213-WA0009.csv": {
+      "status": "success",
+      "shortId": 209,
+      "transcriptsInserted": 435,
+      "startedAt": "2026-03-09T11:38:52.981Z",
+      "finishedAt": "2026-03-09T11:38:53.178Z"
+    },
+    "AUD-20251213-WA0010.csv": {
+      "status": "success",
+      "shortId": 211,
+      "transcriptsInserted": 511,
+      "startedAt": "2026-03-09T11:38:53.182Z",
+      "finishedAt": "2026-03-09T11:38:53.394Z"
+    },
+    "AUD-20251213-WA0011.csv": {
+      "status": "success",
+      "shortId": 125,
+      "transcriptsInserted": 103,
+      "startedAt": "2026-03-09T11:38:53.405Z",
+      "finishedAt": "2026-03-09T11:38:53.601Z"
+    },
+    "AUD-20251213-WA0012.csv": {
+      "status": "success",
+      "shortId": 126,
+      "transcriptsInserted": 168,
+      "startedAt": "2026-03-09T11:38:53.611Z",
+      "finishedAt": "2026-03-09T11:38:53.801Z"
+    },
+    "AUD-20251213-WA0013.csv": {
+      "status": "success",
+      "shortId": 146,
+      "transcriptsInserted": 161,
+      "startedAt": "2026-03-09T11:38:53.811Z",
+      "finishedAt": "2026-03-09T11:38:53.992Z"
+    },
+    "AUD-20251215-WA0000.csv": {
+      "status": "success",
+      "shortId": 93,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-09T11:38:54.002Z",
+      "finishedAt": "2026-03-09T11:38:54.158Z"
+    },
+    "AUD-20251215-WA0002.csv": {
+      "status": "success",
+      "shortId": 154,
+      "transcriptsInserted": 1055,
+      "startedAt": "2026-03-09T11:38:54.170Z",
+      "finishedAt": "2026-03-09T11:38:54.477Z"
+    },
+    "AUD-20251215-WA0003.csv": {
+      "status": "success",
+      "shortId": 114,
+      "transcriptsInserted": 881,
+      "startedAt": "2026-03-09T11:38:54.487Z",
+      "finishedAt": "2026-03-09T11:38:54.717Z"
+    },
+    "AUD-20251215-WA0004.csv": {
+      "status": "success",
+      "shortId": 105,
+      "transcriptsInserted": 901,
+      "startedAt": "2026-03-09T11:38:54.727Z",
+      "finishedAt": "2026-03-09T11:38:54.947Z"
+    },
+    "AUD-20251217-WA0001.csv": {
+      "status": "success",
+      "shortId": 45,
+      "transcriptsInserted": 234,
+      "startedAt": "2026-03-09T11:38:54.950Z",
+      "finishedAt": "2026-03-09T11:38:55.137Z"
+    },
+    "AUD-20251217-WA0002.csv": {
+      "status": "success",
+      "shortId": 75,
+      "transcriptsInserted": 360,
+      "startedAt": "2026-03-09T11:38:55.141Z",
+      "finishedAt": "2026-03-09T11:38:55.359Z"
+    },
+    "AUD-20251217-WA0003.csv": {
+      "status": "success",
+      "shortId": 76,
+      "transcriptsInserted": 449,
+      "startedAt": "2026-03-09T11:38:55.365Z",
+      "finishedAt": "2026-03-09T11:38:55.590Z"
+    },
+    "AUD-20251217-WA0004.csv": {
+      "status": "success",
+      "shortId": 195,
+      "transcriptsInserted": 361,
+      "startedAt": "2026-03-09T11:38:55.594Z",
+      "finishedAt": "2026-03-09T11:38:55.839Z"
+    },
+    "AUD-20251217-WA0005.csv": {
+      "status": "success",
+      "shortId": 194,
+      "transcriptsInserted": 315,
+      "startedAt": "2026-03-09T11:38:55.849Z",
+      "finishedAt": "2026-03-09T11:38:56.064Z"
+    },
+    "AUD-20251218-WA0000.csv": {
+      "status": "success",
+      "shortId": 14,
+      "transcriptsInserted": 1139,
+      "startedAt": "2026-03-09T11:38:56.072Z",
+      "finishedAt": "2026-03-09T11:38:56.410Z"
+    },
+    "AUD-20260102-WA0002.csv": {
+      "status": "success",
+      "shortId": 109,
+      "transcriptsInserted": 1399,
+      "startedAt": "2026-03-09T11:38:56.419Z",
+      "finishedAt": "2026-03-09T11:38:56.974Z"
+    },
+    "AUD-20260102-WA0003.csv": {
+      "status": "success",
+      "shortId": 129,
+      "transcriptsInserted": 88,
+      "startedAt": "2026-03-09T11:38:56.977Z",
+      "finishedAt": "2026-03-09T11:38:57.162Z"
+    },
+    "AUD-20260103-WA0003.csv": {
+      "status": "success",
+      "shortId": 157,
+      "transcriptsInserted": 865,
+      "startedAt": "2026-03-09T11:38:57.167Z",
+      "finishedAt": "2026-03-09T11:38:57.403Z"
+    },
+    "AUDIO-2025-11-28-23-15-18.csv": {
+      "status": "success",
+      "shortId": 127,
+      "transcriptsInserted": 45,
+      "startedAt": "2026-03-09T11:38:57.408Z",
+      "finishedAt": "2026-03-09T11:38:57.594Z"
+    },
+    "AUDIO-2025-12-19-17-36-02.csv": {
+      "status": "success",
+      "shortId": 128,
+      "transcriptsInserted": 159,
+      "startedAt": "2026-03-09T11:38:57.603Z",
+      "finishedAt": "2026-03-09T11:38:57.798Z"
+    },
+    "AUDIO-2025-12-22-07-20-10 (1).csv": {
+      "status": "success",
+      "shortId": 135,
+      "transcriptsInserted": 1053,
+      "startedAt": "2026-03-09T11:38:57.802Z",
+      "finishedAt": "2026-03-09T11:38:58.099Z"
+    },
+    "AUDIO-2025-12-22-07-20-24.csv": {
+      "status": "success",
+      "shortId": 169,
+      "transcriptsInserted": 519,
+      "startedAt": "2026-03-09T11:38:58.102Z",
+      "finishedAt": "2026-03-09T11:38:58.314Z"
+    },
+    "AUDIO-2025-12-22-14-05-29 (1).csv": {
+      "status": "success",
+      "shortId": 106,
+      "transcriptsInserted": 155,
+      "startedAt": "2026-03-09T11:38:58.319Z",
+      "finishedAt": "2026-03-09T11:38:58.524Z"
+    },
+    "AUDIO-2025-12-22-14-05-30.csv": {
+      "status": "success",
+      "shortId": 197,
+      "transcriptsInserted": 590,
+      "startedAt": "2026-03-09T11:38:58.534Z",
+      "finishedAt": "2026-03-09T11:38:58.794Z"
+    },
+    "AUDIO-2025-12-22-17-22-12.csv": {
+      "status": "success",
+      "shortId": 46,
+      "transcriptsInserted": 345,
+      "startedAt": "2026-03-09T11:38:58.802Z",
+      "finishedAt": "2026-03-09T11:38:59.011Z"
+    },
+    "AUDIO-2025-12-22-17-23-19.csv": {
+      "status": "success",
+      "shortId": 15,
+      "transcriptsInserted": 857,
+      "startedAt": "2026-03-09T11:38:59.017Z",
+      "finishedAt": "2026-03-09T11:38:59.220Z"
+    },
+    "AUDIO-2025-12-22-17-25-03.csv": {
+      "status": "success",
+      "shortId": 77,
+      "transcriptsInserted": 243,
+      "startedAt": "2026-03-09T11:38:59.226Z",
+      "finishedAt": "2026-03-09T11:38:59.422Z"
+    },
+    "AUDIO-2025-12-22-17-31-28.csv": {
+      "status": "success",
+      "shortId": 17,
+      "transcriptsInserted": 664,
+      "startedAt": "2026-03-09T11:38:59.427Z",
+      "finishedAt": "2026-03-09T11:38:59.641Z"
+    },
+    "AUDIO-2025-12-22-21-23-10.csv": {
+      "status": "success",
+      "shortId": 198,
+      "transcriptsInserted": 581,
+      "startedAt": "2026-03-09T11:46:03.771Z",
+      "finishedAt": "2026-03-09T11:46:04.103Z"
+    },
+    "AUDIO-2025-12-24-17-02-49.csv": {
+      "status": "success",
+      "shortId": 48,
+      "transcriptsInserted": 229,
+      "startedAt": "2026-03-09T11:46:04.115Z",
+      "finishedAt": "2026-03-09T11:46:04.317Z"
+    },
+    "AUDIO-2025-12-25-21-15-03.csv": {
+      "status": "success",
+      "shortId": 170,
+      "transcriptsInserted": 502,
+      "startedAt": "2026-03-09T11:46:04.322Z",
+      "finishedAt": "2026-03-09T11:46:04.527Z"
+    },
+    "AUDIO-2025-12-26-14-10-13.csv": {
+      "status": "success",
+      "shortId": 147,
+      "transcriptsInserted": 202,
+      "startedAt": "2026-03-09T11:46:04.539Z",
+      "finishedAt": "2026-03-09T11:46:04.724Z"
+    },
+    "AUDIO-2025-12-27-10-21-24 (1).csv": {
+      "status": "success",
+      "shortId": 119,
+      "transcriptsInserted": 152,
+      "startedAt": "2026-03-09T11:46:04.735Z",
+      "finishedAt": "2026-03-09T11:46:04.927Z"
+    },
+    "AUDIO-2025-12-27-10-25-24.csv": {
+      "status": "success",
+      "shortId": 136,
+      "transcriptsInserted": 1676,
+      "startedAt": "2026-03-09T11:46:04.931Z",
+      "finishedAt": "2026-03-09T11:46:05.254Z"
+    },
+    "AUDIO-2025-12-27-19-31-11.csv": {
+      "status": "success",
+      "shortId": 94,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-09T11:46:05.265Z",
+      "finishedAt": "2026-03-09T11:46:05.418Z"
+    },
+    "AUDIO-2025-12-27-19-33-23.csv": {
+      "status": "success",
+      "shortId": 156,
+      "transcriptsInserted": 1123,
+      "startedAt": "2026-03-09T11:46:05.429Z",
+      "finishedAt": "2026-03-09T11:46:05.734Z"
+    },
+    "AUDIO-2025-12-27-19-36-27.csv": {
+      "status": "success",
+      "shortId": 116,
+      "transcriptsInserted": 470,
+      "startedAt": "2026-03-09T11:46:05.742Z",
+      "finishedAt": "2026-03-09T11:46:05.951Z"
+    },
+    "AUDIO-2025-12-28-07-37-23.csv": {
+      "status": "success",
+      "shortId": 107,
+      "transcriptsInserted": 624,
+      "startedAt": "2026-03-09T11:46:05.961Z",
+      "finishedAt": "2026-03-09T11:46:06.175Z"
+    },
+    "AUDIO-2025-12-28-19-47-31.csv": {
+      "status": "success",
+      "shortId": 49,
+      "transcriptsInserted": 141,
+      "startedAt": "2026-03-09T11:46:06.181Z",
+      "finishedAt": "2026-03-09T11:46:06.372Z"
+    },
+    "AUDIO-2025-12-28-19-49-38.csv": {
+      "status": "success",
+      "shortId": 18,
+      "transcriptsInserted": 1061,
+      "startedAt": "2026-03-09T11:46:06.382Z",
+      "finishedAt": "2026-03-09T11:46:06.680Z"
+    },
+    "AUDIO-2025-12-29-20-19-23.csv": {
+      "status": "success",
+      "shortId": 78,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-09T11:46:06.688Z",
+      "finishedAt": "2026-03-09T11:46:06.832Z"
+    },
+    "AUDIO-2025-12-29-20-23-21.csv": {
+      "status": "success",
+      "shortId": 19,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-09T11:46:06.841Z",
+      "finishedAt": "2026-03-09T11:46:06.978Z"
+    },
+    "AUDIO-2025-12-29-22-32-50.csv": {
+      "status": "success",
+      "shortId": 199,
+      "transcriptsInserted": 284,
+      "startedAt": "2026-03-09T11:46:06.988Z",
+      "finishedAt": "2026-03-09T11:46:07.195Z"
+    },
+    "AUDIO-2025-12-30-18-50-52.csv": {
+      "status": "success",
+      "shortId": 50,
+      "transcriptsInserted": 304,
+      "startedAt": "2026-03-09T11:46:07.199Z",
+      "finishedAt": "2026-03-09T11:46:07.398Z"
+    },
+    "AUDIO-2025-12-30-21-23-04.csv": {
+      "status": "success",
+      "shortId": 212,
+      "transcriptsInserted": 423,
+      "startedAt": "2026-03-09T11:46:07.407Z",
+      "finishedAt": "2026-03-09T11:46:07.598Z"
+    },
+    "AUDIO-2025-12-31-17-11-22.csv": {
+      "status": "success",
+      "shortId": 79,
+      "transcriptsInserted": 312,
+      "startedAt": "2026-03-09T11:46:07.609Z",
+      "finishedAt": "2026-03-09T11:46:07.805Z"
+    },
+    "AUDIO-2025-12-31-23-27-32.csv": {
+      "status": "success",
+      "shortId": 171,
+      "transcriptsInserted": 591,
+      "startedAt": "2026-03-09T11:46:07.815Z",
+      "finishedAt": "2026-03-09T11:46:08.023Z"
+    },
+    "AUDIO-2026-01-03-09-52-35.csv": {
+      "status": "success",
+      "shortId": 133,
+      "transcriptsInserted": 580,
+      "startedAt": "2026-03-09T11:46:08.031Z",
+      "finishedAt": "2026-03-09T11:46:08.237Z"
+    },
+    "AUDIO-2026-01-03-09-53-46.csv": {
+      "status": "success",
+      "shortId": 120,
+      "transcriptsInserted": 1201,
+      "startedAt": "2026-03-09T11:46:08.249Z",
+      "finishedAt": "2026-03-09T11:46:08.551Z"
+    },
+    "AUDIO-2026-01-07-19-05-05.csv": {
+      "status": "success",
+      "shortId": 158,
+      "transcriptsInserted": 833,
+      "startedAt": "2026-03-09T11:46:08.563Z",
+      "finishedAt": "2026-03-09T11:46:08.806Z"
+    },
+    "Mp3 Editor 251009191509.csv": {
+      "status": "success",
+      "shortId": 24,
+      "transcriptsInserted": 309,
+      "startedAt": "2026-03-09T11:54:37.749Z",
+      "finishedAt": "2026-03-09T11:54:38.036Z"
+    },
+    "Mp3 Editor 251010051137.csv": {
+      "status": "success",
+      "shortId": 53,
+      "transcriptsInserted": 179,
+      "startedAt": "2026-03-09T11:54:38.046Z",
+      "finishedAt": "2026-03-09T11:54:38.235Z"
+    },
+    "Mp3 Editor 251010203747.csv": {
+      "status": "success",
+      "shortId": 25,
+      "transcriptsInserted": 341,
+      "startedAt": "2026-03-09T11:54:38.254Z",
+      "finishedAt": "2026-03-09T11:54:38.455Z"
+    },
+    "Mp3 Editor 251010204311.csv": {
+      "status": "success",
+      "shortId": 55,
+      "transcriptsInserted": 342,
+      "startedAt": "2026-03-09T11:54:38.465Z",
+      "finishedAt": "2026-03-09T11:54:38.660Z"
+    },
+    "Mp3 Editor 251010204807.csv": {
+      "status": "success",
+      "shortId": 175,
+      "transcriptsInserted": 618,
+      "startedAt": "2026-03-09T11:54:38.664Z",
+      "finishedAt": "2026-03-09T11:54:38.861Z"
+    },
+    "Mp3 Editor 251010205658.csv": {
+      "status": "success",
+      "shortId": 176,
+      "transcriptsInserted": 309,
+      "startedAt": "2026-03-09T11:54:38.868Z",
+      "finishedAt": "2026-03-09T11:54:39.072Z"
+    },
+    "Mp3 Editor 251010210205.csv": {
+      "status": "success",
+      "shortId": 163,
+      "transcriptsInserted": 498,
+      "startedAt": "2026-03-09T11:54:39.077Z",
+      "finishedAt": "2026-03-09T11:54:39.317Z"
+    },
+    "Mp3 Editor 251010210714.csv": {
+      "status": "success",
+      "shortId": 142,
+      "transcriptsInserted": 191,
+      "startedAt": "2026-03-09T11:54:39.326Z",
+      "finishedAt": "2026-03-09T11:54:39.525Z"
+    },
+    "Mp3 Editor 251010212128.csv": {
+      "status": "success",
+      "shortId": 143,
+      "transcriptsInserted": 134,
+      "startedAt": "2026-03-09T11:54:39.530Z",
+      "finishedAt": "2026-03-09T11:54:39.717Z"
+    },
+    "Mp3 Editor 251013151759.csv": {
+      "status": "success",
+      "shortId": 83,
+      "transcriptsInserted": 130,
+      "startedAt": "2026-03-09T11:54:39.728Z",
+      "finishedAt": "2026-03-09T11:54:39.916Z"
+    },
+    "Mp3 Editor 251013152911.csv": {
+      "status": "success",
+      "shortId": 1,
+      "transcriptsInserted": 1048,
+      "startedAt": "2026-03-09T11:54:39.926Z",
+      "finishedAt": "2026-03-09T11:54:40.232Z"
+    },
+    "Mp3 Editor 251013230959.csv": {
+      "status": "success",
+      "shortId": 96,
+      "transcriptsInserted": 1204,
+      "startedAt": "2026-03-09T11:54:40.237Z",
+      "finishedAt": "2026-03-09T11:54:40.630Z"
+    },
+    "Mp3 Editor 251013232021.csv": {
+      "status": "success",
+      "shortId": 2,
+      "transcriptsInserted": 926,
+      "startedAt": "2026-03-09T11:54:40.637Z",
+      "finishedAt": "2026-03-09T11:54:40.863Z"
+    },
+    "Mp3 Editor 251013232558.csv": {
+      "status": "success",
+      "shortId": 177,
+      "transcriptsInserted": 366,
+      "startedAt": "2026-03-09T11:54:40.874Z",
+      "finishedAt": "2026-03-09T11:54:41.090Z"
+    },
+    "Mp3 Editor 251013233321.csv": {
+      "status": "success",
+      "shortId": 26,
+      "transcriptsInserted": 192,
+      "startedAt": "2026-03-09T11:54:41.102Z",
+      "finishedAt": "2026-03-09T11:54:41.302Z"
+    },
+    "Mp3 Editor 251013233847.csv": {
+      "status": "success",
+      "shortId": 56,
+      "transcriptsInserted": 406,
+      "startedAt": "2026-03-09T11:54:41.313Z",
+      "finishedAt": "2026-03-09T11:54:41.593Z"
+    },
+    "Mp3 Editor 251015085009.csv": {
+      "status": "success",
+      "shortId": 3,
+      "transcriptsInserted": 1174,
+      "startedAt": "2026-03-09T11:54:41.597Z",
+      "finishedAt": "2026-03-09T11:54:41.916Z"
+    },
+    "Mp3 Editor 251015092648.csv": {
+      "status": "success",
+      "shortId": 84,
+      "transcriptsInserted": 346,
+      "startedAt": "2026-03-09T11:54:41.921Z",
+      "finishedAt": "2026-03-09T11:54:42.104Z"
+    },
+    "Mp3 Editor 251015104410.csv": {
+      "status": "success",
+      "shortId": 27,
+      "transcriptsInserted": 288,
+      "startedAt": "2026-03-09T11:54:42.114Z",
+      "finishedAt": "2026-03-09T11:54:42.311Z"
+    },
+    "Mp3 Editor 251015104815.csv": {
+      "status": "success",
+      "shortId": 205,
+      "transcriptsInserted": 530,
+      "startedAt": "2026-03-09T11:54:42.340Z",
+      "finishedAt": "2026-03-09T11:54:42.551Z"
+    },
+    "Mp3 Editor 251015105458.csv": {
+      "status": "success",
+      "shortId": 28,
+      "transcriptsInserted": 271,
+      "startedAt": "2026-03-09T11:54:42.560Z",
+      "finishedAt": "2026-03-09T11:54:42.755Z"
+    },
+    "Mp3 Editor 251015105923.csv": {
+      "status": "success",
+      "shortId": 57,
+      "transcriptsInserted": 108,
+      "startedAt": "2026-03-09T11:54:42.764Z",
+      "finishedAt": "2026-03-09T11:54:42.965Z"
+    },
+    "Mp3 Editor 251015221637.csv": {
+      "status": "success",
+      "shortId": 164,
+      "transcriptsInserted": 541,
+      "startedAt": "2026-03-09T11:54:42.976Z",
+      "finishedAt": "2026-03-09T11:54:43.184Z"
+    },
+    "Mp3 Editor 251015222016.csv": {
+      "status": "success",
+      "shortId": 58,
+      "transcriptsInserted": 282,
+      "startedAt": "2026-03-09T11:54:43.197Z",
+      "finishedAt": "2026-03-09T11:54:43.382Z"
+    },
+    "Mp3 Editor 251015223341.csv": {
+      "status": "success",
+      "shortId": 97,
+      "transcriptsInserted": 1041,
+      "startedAt": "2026-03-09T11:54:43.387Z",
+      "finishedAt": "2026-03-09T11:54:43.668Z"
+    },
+    "Mp3 Editor 251015223639.csv": {
+      "status": "success",
+      "shortId": 85,
+      "transcriptsInserted": 53,
+      "startedAt": "2026-03-09T11:54:43.696Z",
+      "finishedAt": "2026-03-09T11:54:43.875Z"
+    },
+    "Mp3 Editor 251015223832.csv": {
+      "status": "success",
+      "shortId": 29,
+      "transcriptsInserted": 152,
+      "startedAt": "2026-03-09T12:03:43.344Z",
+      "finishedAt": "2026-03-09T12:03:43.591Z"
+    },
+    "Mp3 Editor 251015224410.csv": {
+      "status": "success",
+      "shortId": 179,
+      "transcriptsInserted": 245,
+      "startedAt": "2026-03-09T12:03:43.602Z",
+      "finishedAt": "2026-03-09T12:03:43.840Z"
+    },
+    "Mp3 Editor 251015225547.csv": {
+      "status": "success",
+      "shortId": 59,
+      "transcriptsInserted": 184,
+      "startedAt": "2026-03-09T12:03:43.852Z",
+      "finishedAt": "2026-03-09T12:03:44.049Z"
+    },
+    "Mp3 Editor 251015230010.csv": {
+      "status": "success",
+      "shortId": 180,
+      "transcriptsInserted": 269,
+      "startedAt": "2026-03-09T12:03:44.058Z",
+      "finishedAt": "2026-03-09T12:03:44.259Z"
+    },
+    "Mp3 Editor 251017120729.csv": {
+      "status": "success",
+      "shortId": 30,
+      "transcriptsInserted": 127,
+      "startedAt": "2026-03-09T12:03:44.264Z",
+      "finishedAt": "2026-03-09T12:03:44.449Z"
+    },
+    "Mp3 Editor 251017121802.csv": {
+      "status": "success",
+      "shortId": 60,
+      "transcriptsInserted": 246,
+      "startedAt": "2026-03-09T12:03:44.460Z",
+      "finishedAt": "2026-03-09T12:03:44.658Z"
+    },
+    "Mp3 Editor 251017122120.csv": {
+      "status": "success",
+      "shortId": 86,
+      "transcriptsInserted": 141,
+      "startedAt": "2026-03-09T12:03:44.665Z",
+      "finishedAt": "2026-03-09T12:03:44.848Z"
+    },
+    "Mp3 Editor 251017122807.csv": {
+      "status": "success",
+      "shortId": 98,
+      "transcriptsInserted": 994,
+      "startedAt": "2026-03-09T12:03:44.852Z",
+      "finishedAt": "2026-03-09T12:03:45.107Z"
+    },
+    "Mp3 Editor 251017153618.csv": {
+      "status": "success",
+      "shortId": 31,
+      "transcriptsInserted": 273,
+      "startedAt": "2026-03-09T12:03:45.118Z",
+      "finishedAt": "2026-03-09T12:03:45.321Z"
+    },
+    "Mp3 Editor 251017153959.csv": {
+      "status": "success",
+      "shortId": 61,
+      "transcriptsInserted": 159,
+      "startedAt": "2026-03-09T12:03:45.326Z",
+      "finishedAt": "2026-03-09T12:03:45.537Z"
+    },
+    "Mp3 Editor 251017165500.csv": {
+      "status": "success",
+      "shortId": 206,
+      "transcriptsInserted": 299,
+      "startedAt": "2026-03-09T12:03:45.549Z",
+      "finishedAt": "2026-03-09T12:03:45.799Z"
+    },
+    "Mp3 Editor 251017170123.csv": {
+      "status": "success",
+      "shortId": 32,
+      "transcriptsInserted": 223,
+      "startedAt": "2026-03-09T12:03:45.803Z",
+      "finishedAt": "2026-03-09T12:03:45.996Z"
+    },
+    "Mp3 Editor 251017170646.csv": {
+      "status": "success",
+      "shortId": 62,
+      "transcriptsInserted": 179,
+      "startedAt": "2026-03-09T12:03:46.001Z",
+      "finishedAt": "2026-03-09T12:03:46.195Z"
+    },
+    "Mp3 Editor 251022060402.csv": {
+      "status": "success",
+      "shortId": 4,
+      "transcriptsInserted": 1205,
+      "startedAt": "2026-03-09T12:03:46.207Z",
+      "finishedAt": "2026-03-09T12:03:46.543Z"
+    },
+    "Mp3 Editor 251022060954.csv": {
+      "status": "success",
+      "shortId": 5,
+      "transcriptsInserted": 1345,
+      "startedAt": "2026-03-09T12:03:46.554Z",
+      "finishedAt": "2026-03-09T12:03:46.901Z"
+    },
+    "Mp3 Editor 251022061746.csv": {
+      "status": "success",
+      "shortId": 33,
+      "transcriptsInserted": 289,
+      "startedAt": "2026-03-09T12:03:46.907Z",
+      "finishedAt": "2026-03-09T12:03:47.125Z"
+    },
+    "Mp3 Editor 251026012445.csv": {
+      "status": "success",
+      "shortId": 99,
+      "transcriptsInserted": 1076,
+      "startedAt": "2026-03-09T12:03:47.134Z",
+      "finishedAt": "2026-03-09T12:03:47.456Z"
+    },
+    "Mp3 Editor 251026014231.csv": {
+      "status": "success",
+      "shortId": 148,
+      "transcriptsInserted": 876,
+      "startedAt": "2026-03-09T12:03:47.461Z",
+      "finishedAt": "2026-03-09T12:03:47.693Z"
+    },
+    "Mp3 Editor 251026014901.csv": {
+      "status": "success",
+      "shortId": 87,
+      "transcriptsInserted": 120,
+      "startedAt": "2026-03-09T12:03:47.700Z",
+      "finishedAt": "2026-03-09T12:03:47.890Z"
+    },
+    "Mp3 Editor 251026020733.csv": {
+      "status": "success",
+      "shortId": 95,
+      "transcriptsInserted": 1084,
+      "startedAt": "2026-03-09T12:03:47.901Z",
+      "finishedAt": "2026-03-09T12:03:48.217Z"
+    },
+    "Mp3 Editor 251026021742.csv": {
+      "status": "success",
+      "shortId": 63,
+      "transcriptsInserted": 233,
+      "startedAt": "2026-03-09T12:03:48.228Z",
+      "finishedAt": "2026-03-09T12:03:48.421Z"
+    },
+    "Mp3 Editor 251026022439.csv": {
+      "status": "success",
+      "shortId": 34,
+      "transcriptsInserted": 197,
+      "startedAt": "2026-03-09T12:03:48.432Z",
+      "finishedAt": "2026-03-09T12:03:48.617Z"
+    },
+    "Mp3 Editor 251026023758.csv": {
+      "status": "success",
+      "shortId": 64,
+      "transcriptsInserted": 231,
+      "startedAt": "2026-03-09T12:03:48.629Z",
+      "finishedAt": "2026-03-09T12:03:48.818Z"
+    },
+    "Mp3 Editor 251026070944.csv": {
+      "status": "success",
+      "shortId": 88,
+      "transcriptsInserted": 251,
+      "startedAt": "2026-03-09T12:03:48.829Z",
+      "finishedAt": "2026-03-09T12:03:49.024Z"
+    },
+    "Mp3 Editor 251026073039.csv": {
+      "status": "success",
+      "shortId": 149,
+      "transcriptsInserted": 1203,
+      "startedAt": "2026-03-09T12:03:49.035Z",
+      "finishedAt": "2026-03-09T12:03:49.338Z"
+    },
+    "Mp3 Editor 251026073911.csv": {
+      "status": "success",
+      "shortId": 100,
+      "transcriptsInserted": 1104,
+      "startedAt": "2026-03-09T12:03:49.349Z",
+      "finishedAt": "2026-03-09T12:03:49.644Z"
+    },
+    "Mp3 Editor 251127124005.csv": {
+      "status": "success",
+      "shortId": 37,
+      "transcriptsInserted": 107,
+      "startedAt": "2026-03-09T12:03:49.652Z",
+      "finishedAt": "2026-03-09T12:03:49.833Z"
+    },
+    "Mp3 Editor 251127124529.csv": {
+      "status": "success",
+      "shortId": 6,
+      "transcriptsInserted": 1066,
+      "startedAt": "2026-03-09T12:03:49.844Z",
+      "finishedAt": "2026-03-09T12:03:50.135Z"
+    },
+    "Mp3 Editor 251127133423.csv": {
+      "status": "success",
+      "shortId": 67,
+      "transcriptsInserted": 217,
+      "startedAt": "2026-03-09T12:03:50.146Z",
+      "finishedAt": "2026-03-09T12:03:50.351Z"
+    },
+    "Mp3 Editor 251127133948.csv": {
+      "status": "success",
+      "shortId": 7,
+      "transcriptsInserted": 878,
+      "startedAt": "2026-03-09T12:03:50.361Z",
+      "finishedAt": "2026-03-09T12:03:50.611Z"
+    },
+    "Mp3 Editor 251129224717.csv": {
+      "status": "success",
+      "shortId": 8,
+      "transcriptsInserted": 878,
+      "startedAt": "2026-03-09T12:03:50.616Z",
+      "finishedAt": "2026-03-09T12:03:50.861Z"
+    },
+    "Mp3 Editor 251129225126.csv": {
+      "status": "success",
+      "shortId": 38,
+      "transcriptsInserted": 219,
+      "startedAt": "2026-03-09T12:03:50.866Z",
+      "finishedAt": "2026-03-09T12:03:51.049Z"
+    },
+    "Mp3 Editor 251129225724.csv": {
+      "status": "success",
+      "shortId": 101,
+      "transcriptsInserted": 636,
+      "startedAt": "2026-03-09T12:03:51.060Z",
+      "finishedAt": "2026-03-09T12:03:51.304Z"
+    },
+    "Mp3 Editor 251129231102.csv": {
+      "status": "success",
+      "shortId": 89,
+      "transcriptsInserted": 174,
+      "startedAt": "2026-03-09T12:03:51.316Z",
+      "finishedAt": "2026-03-09T12:03:51.511Z"
+    },
+    "Mp3 Editor 251201223831.csv": {
+      "status": "success",
+      "shortId": 39,
+      "transcriptsInserted": 275,
+      "startedAt": "2026-03-09T12:03:51.523Z",
+      "finishedAt": "2026-03-09T12:03:51.724Z"
+    },
+    "Mp3 Editor 251201224432.csv": {
+      "status": "success",
+      "shortId": 69,
+      "transcriptsInserted": 237,
+      "startedAt": "2026-03-09T12:03:51.728Z",
+      "finishedAt": "2026-03-09T12:03:51.920Z"
+    },
+    "Mp3 Editor 251202153513.csv": {
+      "status": "success",
+      "shortId": 9,
+      "transcriptsInserted": 1171,
+      "startedAt": "2026-03-09T12:03:51.925Z",
+      "finishedAt": "2026-03-09T12:03:52.249Z"
+    },
+    "Mp3 Editor 251202160312.csv": {
+      "status": "success",
+      "shortId": 40,
+      "transcriptsInserted": 89,
+      "startedAt": "2026-03-09T12:03:52.260Z",
+      "finishedAt": "2026-03-09T12:03:52.449Z"
+    },
+    "Mp3 Editor 251202160725.csv": {
+      "status": "success",
+      "shortId": 102,
+      "transcriptsInserted": 883,
+      "startedAt": "2026-03-09T12:03:52.460Z",
+      "finishedAt": "2026-03-09T12:03:52.736Z"
+    },
+    "Mp3 Editor 251202161629.csv": {
+      "status": "success",
+      "shortId": 151,
+      "transcriptsInserted": 862,
+      "startedAt": "2026-03-09T12:03:52.747Z",
+      "finishedAt": "2026-03-09T12:03:52.990Z"
+    },
+    "Mp3 Editor 251202163202.csv": {
+      "status": "success",
+      "shortId": 90,
+      "transcriptsInserted": 152,
+      "startedAt": "2026-03-09T12:03:52.998Z",
+      "finishedAt": "2026-03-09T12:03:53.196Z"
+    },
+    "Mp3 Editor 251208205847.csv": {
+      "status": "success",
+      "shortId": 11,
+      "transcriptsInserted": 729,
+      "startedAt": "2026-03-09T12:03:53.205Z",
+      "finishedAt": "2026-03-09T12:03:53.443Z"
+    },
+    "Mp3 Editor 251208210432.csv": {
+      "status": "success",
+      "shortId": 12,
+      "transcriptsInserted": 694,
+      "startedAt": "2026-03-09T12:03:53.452Z",
+      "finishedAt": "2026-03-09T12:03:53.683Z"
+    },
+    "Mp3 Editor 251208214714.csv": {
+      "status": "success",
+      "shortId": 103,
+      "transcriptsInserted": 817,
+      "startedAt": "2026-03-09T12:03:53.687Z",
+      "finishedAt": "2026-03-09T12:03:53.922Z"
+    },
+    "Mp3 Editor 251208225109.csv": {
+      "status": "success",
+      "shortId": 72,
+      "transcriptsInserted": 337,
+      "startedAt": "2026-03-09T12:03:53.933Z",
+      "finishedAt": "2026-03-09T12:03:54.142Z"
+    },
+    "Mp3 Editor 251208230041.csv": {
+      "status": "success",
+      "shortId": 73,
+      "transcriptsInserted": 633,
+      "startedAt": "2026-03-09T12:03:54.146Z",
+      "finishedAt": "2026-03-09T12:03:54.353Z"
+    },
+    "4 5992475423785622177 (1).csv": {
+      "status": "success",
+      "shortId": 161,
+      "transcriptsInserted": 401,
+      "startedAt": "2026-03-09T12:06:08.652Z",
+      "finishedAt": "2026-03-09T12:06:08.952Z"
+    },
+    "4 5996911497937164125.csv": {
+      "status": "success",
+      "shortId": 141,
+      "transcriptsInserted": 190,
+      "startedAt": "2026-03-09T12:06:08.957Z",
+      "finishedAt": "2026-03-09T12:06:09.148Z"
+    },
+    "4 5996911497937164163.csv": {
+      "status": "success",
+      "shortId": 81,
+      "transcriptsInserted": 286,
+      "startedAt": "2026-03-09T12:06:09.157Z",
+      "finishedAt": "2026-03-09T12:06:09.350Z"
+    },
+    "4 5996911497937164203.csv": {
+      "status": "success",
+      "shortId": 22,
+      "transcriptsInserted": 1,
+      "startedAt": "2026-03-09T12:06:09.355Z",
+      "finishedAt": "2026-03-09T12:06:09.534Z"
+    },
+    "4 5996911497937164265.csv": {
+      "status": "success",
+      "shortId": 174,
+      "transcriptsInserted": 467,
+      "startedAt": "2026-03-09T12:06:09.546Z",
+      "finishedAt": "2026-03-09T12:06:09.749Z"
+    },
+    "4 5996911497937164379.csv": {
+      "status": "success",
+      "shortId": 23,
+      "transcriptsInserted": 183,
+      "startedAt": "2026-03-09T12:06:09.758Z",
+      "finishedAt": "2026-03-09T12:06:09.954Z"
+    },
+    "4 5996911497937164380.csv": {
+      "status": "success",
+      "shortId": 203,
+      "transcriptsInserted": 543,
+      "startedAt": "2026-03-09T12:06:09.965Z",
+      "finishedAt": "2026-03-09T12:06:10.199Z"
+    },
+    "4 5996911497937164392.csv": {
+      "status": "success",
+      "shortId": 162,
+      "transcriptsInserted": 390,
+      "startedAt": "2026-03-09T12:06:10.211Z",
+      "finishedAt": "2026-03-09T12:06:10.424Z"
+    },
+    "4 5999163297750849130.csv": {
+      "status": "success",
+      "shortId": 52,
+      "transcriptsInserted": 310,
+      "startedAt": "2026-03-09T12:06:10.429Z",
+      "finishedAt": "2026-03-09T12:06:10.615Z"
+    },
+    "4 5999163297750849343.csv": {
+      "status": "success",
+      "shortId": 82,
+      "transcriptsInserted": 348,
+      "startedAt": "2026-03-09T12:06:10.626Z",
+      "finishedAt": "2026-03-09T12:06:10.819Z"
+    },
+    "4 5999204516551989829.csv": {
+      "status": "success",
+      "shortId": 54,
+      "transcriptsInserted": 368,
+      "startedAt": "2026-03-09T12:06:10.823Z",
+      "finishedAt": "2026-03-09T12:06:11.013Z"
+    },
+    "Subulussalam.csv": {
+      "status": "success",
+      "shortId": 137,
+      "transcriptsInserted": 767,
+      "startedAt": "2026-03-09T12:06:53.613Z",
+      "finishedAt": "2026-03-09T12:06:53.977Z"
+    }
+  }
+}
