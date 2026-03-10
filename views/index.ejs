@@ -29,6 +29,10 @@
         box-sizing: border-box;
       }
 
+      [hidden] {
+        display: none !important;
+      }
+
       body {
         font-family: "Noto Naskh Arabic", serif;
         background: var(--paper);
@@ -284,6 +288,17 @@
         color: var(--primary-dark);
       }
 
+      .empty-state {
+        margin-top: 16px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .empty-hint {
+        margin-top: 6px;
+        color: var(--text-muted);
+      }
+
       .muted {
         color: var(--text-muted);
       }
@@ -423,9 +438,9 @@
 
         <nav class="nav-desktop">
           <a href="/" class="nav-link">الرئيسية</a>
-          <a href="https://wurud.onrender.com/browse" class="nav-link" target="_blank" rel="noopener noreferrer">جميع المحاضرات</a>
-          <a href="https://wurud.onrender.com/series" class="nav-link" target="_blank" rel="noopener noreferrer">السلاسل</a>
-          <a href="https://wurud.onrender.com/sheikhs/حسن-بن-محمد-منصور-الدغريري" class="nav-link" target="_blank" rel="noopener noreferrer">السيرة الذاتية</a>
+          <a href="https://rasmihassan.com/browse" class="nav-link" target="_blank" rel="noopener noreferrer">جميع المحاضرات</a>
+          <a href="https://rasmihassan.com/series" class="nav-link" target="_blank" rel="noopener noreferrer">السلاسل</a>
+          <a href="https://rasmihassan.com/sheikhs/حسن-بن-محمد-منصور-الدغريري" class="nav-link" target="_blank" rel="noopener noreferrer">السيرة الذاتية</a>
         </nav>
 
         <button id="menuToggle" class="hamburger-btn" aria-label="القائمة">☰</button>
@@ -434,9 +449,9 @@
 
     <div id="mobileNav" class="mobile-nav">
       <a href="/">الرئيسية</a>
-      <a href="https://wurud.onrender.com/browse" target="_blank" rel="noopener noreferrer">جميع المحاضرات</a>
-      <a href="https://wurud.onrender.com/series" target="_blank" rel="noopener noreferrer">السلاسل</a>
-      <a href="https://wurud.onrender.com/sheikhs/حسن-بن-محمد-منصور-الدغريري" target="_blank" rel="noopener noreferrer">السيرة الذاتية</a>
+      <a href="https://rasmihassan.com/browse" target="_blank" rel="noopener noreferrer">جميع المحاضرات</a>
+      <a href="https://rasmihassan.com/series" target="_blank" rel="noopener noreferrer">السلاسل</a>
+      <a href="https://rasmihassan.com/sheikhs/حسن-بن-محمد-منصور-الدغريري" target="_blank" rel="noopener noreferrer">السيرة الذاتية</a>
     </div>
     <div id="mobileNavBackdrop" class="mobile-nav-backdrop"></div>
 
@@ -447,7 +462,7 @@
       </section>
 
       <div class="search-shell">
-        <form action="/search" method="GET">
+        <form action="/search" method="GET" id="searchForm">
           <input
             type="text"
             name="q"
@@ -459,7 +474,8 @@
         </form>
 
         <% if (searched && !error && results.length === 0) { %>
-        <p class="muted">ما لقينا نتائج لهذا البحث.</p>
+        <p class="empty-state">لا توجد نتائج لهذا البحث.</p>
+        <p class="empty-hint">جرّب كتابة اسم بدون لقب، أو ابحث بكلمة واحدة، أو راجع الإملاء.</p>
         <% } %>
 
         <% if (error) { %>
@@ -495,7 +511,8 @@
           }
         %>
 
-        <ul>
+        <% if (searched) { %>
+        <ul id="resultsList">
           <% results.forEach((result) => { %>
           <li>
             <strong><%= result.lectureTitleArabic %></strong>
@@ -527,6 +544,7 @@
           </li>
           <% }) %>
         </ul>
+        <% } %>
 
         <div class="player-wrap">
           <audio id="audioPlayer" controls></audio>
@@ -548,16 +566,15 @@
             <h3>روابط سريعة</h3>
             <ul>
               <li><a href="/">صفحة البحث</a></li>
-              <li><a href="https://wurud.onrender.com/browse" target="_blank" rel="noopener noreferrer">جميع المحاضرات</a></li>
-              <li><a href="https://wurud.onrender.com/series" target="_blank" rel="noopener noreferrer">السلاسل</a></li>
+              <li><a href="https://rasmihassan.com/browse" target="_blank" rel="noopener noreferrer">جميع المحاضرات</a></li>
+              <li><a href="https://rasmihassan.com/series" target="_blank" rel="noopener noreferrer">السلاسل</a></li>
             </ul>
           </div>
           <div>
             <h3>التواصل</h3>
             <ul>
               <li><a href="https://t.me/daririhasan" target="_blank" rel="noopener noreferrer">تيليجرام</a></li>
-              <li><a href="mailto:emah84@gmail.com">emah84@gmail.com</a></li>
-            </ul>
+                          </ul>
           </div>
         </div>
 

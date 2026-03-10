@@ -151,6 +151,28 @@ const KNOWN_ALIAS_GROUPS = [
   ],
 ];
 
+const ARABIC_STOPWORDS = new Set([
+  "بن",
+  "ابن",
+  "بنت",
+  "ال",
+  "و",
+  "في",
+  "على",
+  "من",
+  "عن",
+  "الى",
+  "إلى",
+  "مع",
+  "ثم",
+  "او",
+  "أو",
+  "هذا",
+  "هذه",
+  "ذلك",
+  "تلك",
+]);
+
 function correctedWordsVariant(text) {
   const words = normalizeArabic(text).split(" ").filter(Boolean);
   if (words.length === 0) return "";
@@ -171,6 +193,20 @@ function buildQueryVariants(query) {
 
   const variants = new Set([raw, normalized, corrected, stripped]);
 
+  const tokenized = [
+    ...new Set(
+      [raw, normalized, corrected, stripped]
+        .flatMap((value) => String(value || "").split(/\s+/))
+        .map((word) => word.trim())
+        .filter(Boolean)
+    ),
+  ];
+
+  for (const token of tokenized) {
+    variants.add(token);
+    variants.add(normalizeArabic(token));
+  }
+
   for (const base of [raw, normalized, corrected, stripped]) {
     if (!base) continue;
     variants.add(base.replace(/(^|\s)ا/g, "$1أ"));
@@ -187,6 +223,32 @@ function buildQueryVariants(query) {
   }
 
   return [...variants].filter(Boolean);
+}
+
+function buildTokenQuery(query) {
+  const normalized = normalizeArabic(query);
+  const tokens = normalized.split(" ").filter(Boolean);
+  const filtered = tokens.filter((token) => !ARABIC_STOPWORDS.has(token));
+  const effectiveTokens = filtered.length ? filtered : tokens;
+  const minShouldMatch = Math.min(2, effectiveTokens.length || 1);
+
+  return {
+    normalized,
+    tokens: effectiveTokens,
+    minShouldMatch,
+  };
+}
+
+function filterByTokenMatch(results, tokenInfo) {
+  if (!Array.isArray(results) || results.length === 0) return results;
+  const { tokens, minShouldMatch } = tokenInfo;
+  if (!tokens || tokens.length <= 1) return results;
+
+  return results.filter((result) => {
+    const normalized = normalizeArabic(result.text || "");
+    const hits = tokens.filter((token) => normalized.includes(token)).length;
+    return hits >= minShouldMatch;
+  });
 }
 
 app.set("view engine", "ejs");
@@ -209,6 +271,7 @@ app.get("/", (_req, res) => {
 app.get("/search", async (req, res) => {
   const query = String(req.query.q || "").trim();
   const queryVariants = buildQueryVariants(query);
+  const tokenInfo = buildTokenQuery(query);
 
   if (!query) {
     return res.render("index", { query, results: [], error: null, searched: false });
@@ -220,12 +283,37 @@ app.get("/search", async (req, res) => {
 
     const transcripts = database.collection("transcripts");
 
+    const atlasTokenShould = tokenInfo.tokens.map((token) => ({
+      text: {
+        query: token,
+        path: "text",
+        fuzzy: { maxEdits: 1 },
+        matchCriteria: "any",
+      },
+    }));
+
     const atlasPipeline = [
       {
         $search: {
-          index: "transcripts_text_ar",
+          index: "default",
           compound: {
+            must: [
+              {
+                compound: {
+                  should: atlasTokenShould,
+                  minimumShouldMatch: tokenInfo.minShouldMatch,
+                },
+              },
+            ],
             should: [
+              {
+                phrase: {
+                  query: tokenInfo.normalized,
+                  path: "text.keywordAnalyzer",
+                  slop: 2,
+                  score: { boost: { value: 8 } },
+                },
+              },
               {
                 text: {
                   query,
@@ -244,7 +332,6 @@ app.get("/search", async (req, res) => {
                 },
               },
             ],
-            minimumShouldMatch: 1,
           },
         },
       },
@@ -296,7 +383,8 @@ app.get("/search", async (req, res) => {
       }
     }
 
-    const resultsWithContext = await enrichResultsWithContext(results, transcripts);
+    const filteredResults = filterByTokenMatch(results, tokenInfo);
+    const resultsWithContext = await enrichResultsWithContext(filteredResults, transcripts);
 
     return res.render("index", {
       query,
