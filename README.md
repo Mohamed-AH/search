@@ -8,7 +8,7 @@
    - `MONGODB_URI=mongodb://admin:admin123@127.0.0.1:27017/?authSource=admin`
    - `MONGODB_DB=audio_search_demo`
    - `SEARCH_MODE=local`
-3. import sample data:
+3. import sample data :
    - `npm run sample:import`
 4. run app:
    - `npm run sample:dev`
