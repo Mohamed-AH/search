@@ -1,14 +1,1 @@
-{
-  "version": 2,
-  "functions": {
-    "api/index.mjs": {
-      "runtime": "nodejs20.x"
-    }
-  },
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/api/index.mjs"
-    }
-  ]
-}
+
