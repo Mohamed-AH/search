@@ -1,17 +1,13 @@
-﻿{
-  "version": 2,
+{
   "functions": {
     "api/index.mjs": {
-      "runtime": "@vercel/node"
+      "runtime": "nodejs20.x"
     }
   },
-  "routes": [
+  "rewrites": [
     {
-      "handle": "filesystem"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "api/index.mjs"
+      "source": "/(.*)",
+      "destination": "/api/index.mjs"
     }
   ]
 }
