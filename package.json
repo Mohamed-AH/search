@@ -1,14 +1,14 @@
-﻿{
+{
   "name": "sample-audio-search",
   "version": "1.0.0",
   "private": true,
   "type": "module",
   "engines": {
-    "node": ">=20"
+    "node": "20.x"
   },
   "dependencies": {
-    "ejs": "^5.0.1",
-    "express": "^5.2.1",
-    "mongodb": "^7.1.0"
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "mongodb": "^6.5.0"
   }
 }
