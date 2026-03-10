@@ -242,7 +242,7 @@
         border: 3px solid #d4a574;
         border-radius: 16px;
         margin-bottom: 16px;
-        padding: 20px;
+        padding: 18px 20px;
         box-shadow: 0 6px 16px var(--shadow-warm);
         position: relative;
       }
@@ -260,14 +260,28 @@
       li strong {
         display: block;
         font-family: "Scheherazade New", serif;
-        font-size: 28px;
+        font-size: clamp(22px, 3.2vw, 28px);
         color: var(--text-primary);
-        margin-bottom: 6px;
+        margin-bottom: 4px;
         padding-left: 12px;
       }
 
       li p {
         padding-left: 12px;
+      }
+
+      .result-context-inline {
+        margin-top: 6px;
+        font-size: 17px;
+        color: var(--text-primary);
+        line-height: 1.85;
+      }
+
+      .result-context-inline strong {
+        display: inline;
+        font-weight: 700;
+        padding: 0 4px;
+        color: var(--primary-dark);
       }
 
       .muted {
@@ -281,7 +295,7 @@
       }
 
       .play-from {
-        margin-top: 8px;
+        margin-top: 10px;
       }
 
       .player-wrap {
@@ -389,6 +403,14 @@
         .logo-text {
           font-size: 20px;
         }
+
+        li {
+          padding: 16px;
+        }
+
+        .play-from {
+          width: 100%;
+        }
       }
     </style>
   </head>
@@ -463,17 +485,37 @@
 
             return `${minutes}:${String(seconds).padStart(2, "0")}`;
           }
+
+          function stripInlineTimestamps(text) {
+            return String(text || "")
+              .replace(/\b\d{1,2}:\d{2}(?::\d{2})?\b/g, "")
+              .replace(/[\[\(]\s*\d{1,2}:\d{2}(?::\d{2})?\s*[\]\)]/g, "")
+              .replace(/\s{2,}/g, " ")
+              .trim();
+          }
         %>
 
         <ul>
           <% results.forEach((result) => { %>
           <li>
             <strong><%= result.lectureTitleArabic %></strong>
-            <p><%= result.text %></p>
             <p class="muted">
               المتحدث: <%= result.speaker || "غير معروف" %> | التوقيت:
               <%= formatDuration(result.startTimeSec) %>
             </p>
+
+            <p class="result-context-inline">
+              <%= stripInlineTimestamps((result.contextBefore || []).map((item) => item.text).join(" … ")) %>
+              <% if ((result.contextBefore || []).length) { %>
+              …
+              <% } %>
+              <strong><%= result.text %></strong>
+              <% if ((result.contextAfter || []).length) { %>
+              …
+              <% } %>
+              <%= stripInlineTimestamps((result.contextAfter || []).map((item) => item.text).join(" … ")) %>
+            </p>
+
             <button
               type="button"
               class="play-from"
@@ -555,4 +597,3 @@
     </script>
   </body>
 </html>
-

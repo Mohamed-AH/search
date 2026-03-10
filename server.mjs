@@ -1,4 +1,7 @@
-﻿import express from "express";
+﻿import dotenv from "dotenv";
+dotenv.config({ path: ".env.local" });
+
+import express from "express";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { MongoClient } from "mongodb";
@@ -14,6 +17,8 @@ const searchMode = process.env.SEARCH_MODE || "local"; // local | atlas
 
 let db;
 let indexesReady = false;
+const CONTEXT_WINDOW_SEC = Number(process.env.CONTEXT_WINDOW_SEC || 90);
+const CONTEXT_ITEMS = Number(process.env.CONTEXT_ITEMS || 2);
 
 async function getDb() {
   if (db) return db;
@@ -44,6 +49,7 @@ function joinedProjection() {
     {
       $project: {
         _id: 1,
+        lectureId: 1,
         text: 1,
         startTimeSec: 1,
         speaker: 1,
@@ -54,6 +60,49 @@ function joinedProjection() {
     },
     { $limit: 25 },
   ];
+}
+
+function normalizeStartRange(value, windowSeconds) {
+  const raw = Number(value || 0);
+  if (!Number.isFinite(raw)) return { min: 0, max: 0, raw: 0 };
+  if (raw > 100000) {
+    const windowMs = Math.max(0, windowSeconds) * 1000;
+    return { min: raw - windowMs, max: raw + windowMs, raw };
+  }
+  const window = Math.max(0, windowSeconds);
+  return { min: raw - window, max: raw + window, raw };
+}
+
+async function enrichResultsWithContext(results, transcripts) {
+  if (!Array.isArray(results) || results.length === 0) return results;
+
+  return Promise.all(
+    results.map(async (result) => {
+      if (!result?.lectureId || result.startTimeSec == null) {
+        return { ...result, contextBefore: [], contextAfter: [] };
+      }
+
+      const { min, max, raw } = normalizeStartRange(result.startTimeSec, CONTEXT_WINDOW_SEC);
+      const nearby = await transcripts
+        .find({
+          lectureId: result.lectureId,
+          startTimeSec: { $gte: min, $lte: max },
+        })
+        .project({ _id: 1, text: 1, startTimeSec: 1 })
+        .sort({ startTimeSec: 1 })
+        .toArray();
+
+      const filtered = nearby.filter((item) => String(item._id) !== String(result._id));
+      const before = filtered.filter((item) => item.startTimeSec < raw);
+      const after = filtered.filter((item) => item.startTimeSec > raw);
+
+      return {
+        ...result,
+        contextBefore: before.slice(-CONTEXT_ITEMS),
+        contextAfter: after.slice(0, CONTEXT_ITEMS),
+      };
+    })
+  );
 }
 
 function escapeRegex(value) {
@@ -247,7 +296,14 @@ app.get("/search", async (req, res) => {
       }
     }
 
-    return res.render("index", { query, results, error: null, searched: true });
+    const resultsWithContext = await enrichResultsWithContext(results, transcripts);
+
+    return res.render("index", {
+      query,
+      results: resultsWithContext,
+      error: null,
+      searched: true,
+    });
   } catch {
     return res.render("index", {
       query,
@@ -268,5 +324,3 @@ if (!process.env.VERCEL) {
     console.log(`sample app running on http://localhost:${port} (${searchMode} search)`);
   });
 }
-
-
