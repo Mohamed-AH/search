@@ -237,6 +237,94 @@
         background: var(--accent-amber);
       }
 
+      .feedback-inline {
+        margin-bottom: 18px;
+        padding: 12px 16px;
+        border-radius: 12px;
+        border: 2px dashed var(--border-light);
+        background: #fffaf4;
+      }
+
+      .feedback-toggle {
+        background: transparent;
+        border: 2px solid var(--accent-gold);
+        color: var(--primary-dark);
+        padding: 8px 14px;
+        border-radius: 999px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .feedback-panel {
+        display: none;
+        margin-top: 12px;
+      }
+
+      .feedback-panel.active {
+        display: block;
+      }
+
+      .feedback-actions {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+      }
+
+      .feedback-btn {
+        background: #fff;
+        border: 2px solid var(--accent-gold);
+        color: var(--primary-dark);
+        padding: 8px 14px;
+        border-radius: 999px;
+        font-size: 14px;
+        cursor: pointer;
+      }
+
+      .feedback-btn.active {
+        background: var(--accent-gold);
+        color: var(--primary-dark);
+      }
+
+      .feedback-btn[disabled] {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+
+      .feedback-label {
+        font-size: 14px;
+        color: var(--text-muted);
+        margin-bottom: 6px;
+        display: block;
+      }
+
+      .feedback-form textarea {
+        width: 100%;
+        min-height: 80px;
+        border: 2px solid var(--border-light);
+        border-radius: 10px;
+        padding: 10px 12px;
+        font-family: "Noto Naskh Arabic", serif;
+        font-size: 14px;
+        resize: vertical;
+        background: #fff;
+      }
+
+      .feedback-send {
+        margin-top: 10px;
+        background: var(--accent-gold);
+        color: var(--primary-dark);
+        border-radius: 999px;
+        padding: 8px 18px;
+        font-size: 14px;
+      }
+
+      .feedback-status {
+        color: var(--text-muted);
+        font-size: 14px;
+        margin-top: 8px;
+      }
+
       ul {
         list-style: none;
       }
@@ -473,6 +561,24 @@
           <button type="submit">بحث</button>
         </form>
 
+        <% if (searched && searchLogId) { %>
+        <div class="feedback-inline">
+          <button type="button" class="feedback-toggle" aria-expanded="false">مشاركة رأيك في النتائج</button>
+          <div class="feedback-panel">
+            <div class="feedback-form" data-logid="<%= searchLogId %>">
+              <div class="feedback-actions">
+                <button type="button" class="feedback-btn" data-relevant="true">نتائج مفيدة</button>
+                <button type="button" class="feedback-btn" data-relevant="false">غير مفيدة</button>
+              </div>
+              <label class="feedback-label" for="feedbackComment">تعليق (اختياري)</label>
+              <textarea id="feedbackComment" placeholder="اكتب ملاحظتك هنا..."></textarea>
+              <button type="button" class="feedback-send">إرسال</button>
+              <div class="feedback-status"></div>
+            </div>
+          </div>
+        </div>
+        <% } %>
+
         <% if (searched && !error && results.length === 0) { %>
         <p class="empty-state">لا توجد نتائج لهذا البحث.</p>
         <p class="empty-hint">جرّب كتابة اسم بدون لقب، أو ابحث بكلمة واحدة، أو راجع الإملاء.</p>
@@ -574,7 +680,7 @@
             <h3>التواصل</h3>
             <ul>
               <li><a href="https://t.me/daririhasan" target="_blank" rel="noopener noreferrer">تيليجرام</a></li>
-                          </ul>
+            </ul>
           </div>
         </div>
 

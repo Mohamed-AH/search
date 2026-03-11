@@ -4,7 +4,7 @@ dotenv.config({ path: ".env.local" });
 import express from "express";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { MongoClient } from "mongodb";
+import { MongoClient, ObjectId } from "mongodb";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -267,18 +267,20 @@ function filterByTokenMatch(results, tokenInfo) {
 }
 
 async function logSearch(database, payload) {
-  if (!logSearches) return;
+  if (!logSearches) return null;
   try {
     await ensureSearchLogIndexes(database);
-    await database.collection("search_logs").insertOne(payload);
+    const result = await database.collection("search_logs").insertOne(payload);
+    return result.insertedId ? String(result.insertedId) : null;
   } catch {
-    // best-effort logging only
+    return null;
   }
 }
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded({ extended: false }));
 app.use((_req, res, next) => {
   res.setHeader("Content-Type", "text/html; charset=utf-8");
   next();
@@ -290,7 +292,31 @@ app.get("/", (_req, res) => {
     results: [],
     error: null,
     searched: false,
+    searchLogId: null,
   });
+});
+
+app.post("/search/feedback", async (req, res) => {
+  const logId = String(req.body?.logId || "").trim();
+  const relevantRaw = String(req.body?.relevant || "").trim().toLowerCase();
+  const relevant = relevantRaw === "true" ? true : relevantRaw === "false" ? false : null;
+  const commentRaw = String(req.body?.comment || "").trim();
+  const comment = commentRaw.length > 300 ? commentRaw.slice(0, 300) : commentRaw;
+
+  if (!logId || relevant === null || !ObjectId.isValid(logId)) {
+    return res.status(400).send("invalid");
+  }
+
+  try {
+    const database = await getDb();
+    await database.collection("search_logs").updateOne(
+      { _id: new ObjectId(logId) },
+      { $set: { relevant, relevantAt: new Date(), comment } }
+    );
+    return res.status(204).end();
+  } catch {
+    return res.status(500).send("error");
+  }
 });
 
 app.get("/search", async (req, res) => {
@@ -299,7 +325,7 @@ app.get("/search", async (req, res) => {
   const tokenInfo = buildTokenQuery(query);
 
   if (!query) {
-    return res.render("index", { query, results: [], error: null, searched: false });
+    return res.render("index", { query, results: [], error: null, searched: false, searchLogId: null });
   }
 
   try {
@@ -417,7 +443,7 @@ app.get("/search", async (req, res) => {
       .map((id) => String(id))
       .slice(0, 5);
 
-    logSearch(database, {
+    const searchLogId = await logSearch(database, {
       createdAt: new Date(),
       query,
       normalizedQuery: tokenInfo.normalized,
@@ -434,6 +460,7 @@ app.get("/search", async (req, res) => {
       results: resultsWithContext,
       error: null,
       searched: true,
+      searchLogId,
     });
   } catch {
     return res.render("index", {
@@ -444,6 +471,7 @@ app.get("/search", async (req, res) => {
         searchMode === "atlas"
           ? "search failed. check atlas search index and mongodb connection."
           : "search failed. check local mongodb container and imported data.",
+      searchLogId: null,
     });
   }
 });
