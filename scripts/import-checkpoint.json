@@ -1,6 +1,6 @@
 {
   "createdAt": "2026-03-09T11:26:27.803Z",
-  "updatedAt": "2026-03-09T12:06:53.977Z",
+  "updatedAt": "2026-03-11T08:40:52.893Z",
   "processed": {
     "02.lite.csv": {
       "status": "success",
@@ -1303,6 +1303,1287 @@
       "transcriptsInserted": 767,
       "startedAt": "2026-03-09T12:06:53.613Z",
       "finishedAt": "2026-03-09T12:06:53.977Z"
+    },
+    "108.csv": {
+      "status": "success",
+      "shortId": 108,
+      "transcriptsInserted": 915,
+      "startedAt": "2026-03-11T08:27:09.850Z",
+      "finishedAt": "2026-03-11T08:27:10.231Z"
+    },
+    "111.csv": {
+      "status": "success",
+      "shortId": 111,
+      "transcriptsInserted": 629,
+      "startedAt": "2026-03-11T08:27:10.235Z",
+      "finishedAt": "2026-03-11T08:27:10.455Z"
+    },
+    "115.csv": {
+      "status": "success",
+      "shortId": 115,
+      "transcriptsInserted": 681,
+      "startedAt": "2026-03-11T08:27:10.459Z",
+      "finishedAt": "2026-03-11T08:27:10.702Z"
+    },
+    "117.csv": {
+      "status": "success",
+      "shortId": 117,
+      "transcriptsInserted": 364,
+      "startedAt": "2026-03-11T08:27:10.706Z",
+      "finishedAt": "2026-03-11T08:27:10.903Z"
+    },
+    "118.csv": {
+      "status": "success",
+      "shortId": 118,
+      "transcriptsInserted": 921,
+      "startedAt": "2026-03-11T08:27:10.906Z",
+      "finishedAt": "2026-03-11T08:27:11.114Z"
+    },
+    "121.csv": {
+      "status": "success",
+      "shortId": 121,
+      "transcriptsInserted": 878,
+      "startedAt": "2026-03-11T08:27:11.117Z",
+      "finishedAt": "2026-03-11T08:27:11.325Z"
+    },
+    "13.csv": {
+      "status": "success",
+      "shortId": 13,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-11T08:27:11.328Z",
+      "finishedAt": "2026-03-11T08:27:11.471Z"
+    },
+    "130.csv": {
+      "status": "success",
+      "shortId": 130,
+      "transcriptsInserted": 210,
+      "startedAt": "2026-03-11T08:27:11.476Z",
+      "finishedAt": "2026-03-11T08:27:11.678Z"
+    },
+    "131.csv": {
+      "status": "success",
+      "shortId": 131,
+      "transcriptsInserted": 1250,
+      "startedAt": "2026-03-11T08:27:11.682Z",
+      "finishedAt": "2026-03-11T08:27:11.988Z"
+    },
+    "132.csv": {
+      "status": "success",
+      "shortId": 132,
+      "transcriptsInserted": 845,
+      "startedAt": "2026-03-11T08:27:11.993Z",
+      "finishedAt": "2026-03-11T08:27:12.257Z"
+    },
+    "134.csv": {
+      "status": "success",
+      "shortId": 134,
+      "transcriptsInserted": 518,
+      "startedAt": "2026-03-11T08:27:12.261Z",
+      "finishedAt": "2026-03-11T08:27:12.498Z"
+    },
+    "138.csv": {
+      "status": "success",
+      "shortId": 138,
+      "transcriptsInserted": 774,
+      "startedAt": "2026-03-11T08:27:12.502Z",
+      "finishedAt": "2026-03-11T08:27:12.728Z"
+    },
+    "139.csv": {
+      "status": "success",
+      "shortId": 139,
+      "transcriptsInserted": 1049,
+      "startedAt": "2026-03-11T08:27:12.732Z",
+      "finishedAt": "2026-03-11T08:27:12.999Z"
+    },
+    "140.csv": {
+      "status": "success",
+      "shortId": 140,
+      "transcriptsInserted": 183,
+      "startedAt": "2026-03-11T08:27:13.003Z",
+      "finishedAt": "2026-03-11T08:27:13.188Z"
+    },
+    "145.csv": {
+      "status": "success",
+      "shortId": 145,
+      "transcriptsInserted": 170,
+      "startedAt": "2026-03-11T08:27:13.192Z",
+      "finishedAt": "2026-03-11T08:27:13.379Z"
+    },
+    "155.csv": {
+      "status": "success",
+      "shortId": 155,
+      "transcriptsInserted": 281,
+      "startedAt": "2026-03-11T08:27:13.382Z",
+      "finishedAt": "2026-03-11T08:27:13.585Z"
+    },
+    "159.csv": {
+      "status": "success",
+      "shortId": 159,
+      "transcriptsInserted": 24,
+      "startedAt": "2026-03-11T08:27:13.588Z",
+      "finishedAt": "2026-03-11T08:27:13.759Z"
+    },
+    "16.csv": {
+      "status": "success",
+      "shortId": 16,
+      "transcriptsInserted": 830,
+      "startedAt": "2026-03-11T08:27:13.763Z",
+      "finishedAt": "2026-03-11T08:27:13.969Z"
+    },
+    "160.csv": {
+      "status": "success",
+      "shortId": 160,
+      "transcriptsInserted": 138,
+      "startedAt": "2026-03-11T08:27:13.972Z",
+      "finishedAt": "2026-03-11T08:27:14.159Z"
+    },
+    "19.csv": {
+      "status": "success",
+      "shortId": 19,
+      "transcriptsInserted": 1070,
+      "startedAt": "2026-03-11T08:27:14.164Z",
+      "finishedAt": "2026-03-11T08:27:14.463Z"
+    },
+    "196.csv": {
+      "status": "success",
+      "shortId": 196,
+      "transcriptsInserted": 444,
+      "startedAt": "2026-03-11T08:27:14.467Z",
+      "finishedAt": "2026-03-11T08:27:14.658Z"
+    },
+    "20.csv": {
+      "status": "success",
+      "shortId": 20,
+      "transcriptsInserted": 445,
+      "startedAt": "2026-03-11T08:27:14.663Z",
+      "finishedAt": "2026-03-11T08:27:14.865Z"
+    },
+    "200.csv": {
+      "status": "success",
+      "shortId": 200,
+      "transcriptsInserted": 452,
+      "startedAt": "2026-03-11T08:27:14.869Z",
+      "finishedAt": "2026-03-11T08:27:15.059Z"
+    },
+    "21.csv": {
+      "status": "success",
+      "shortId": 21,
+      "transcriptsInserted": 323,
+      "startedAt": "2026-03-11T08:27:15.064Z",
+      "finishedAt": "2026-03-11T08:27:15.247Z"
+    },
+    "210.csv": {
+      "status": "success",
+      "shortId": 210,
+      "transcriptsInserted": 375,
+      "startedAt": "2026-03-11T08:27:15.251Z",
+      "finishedAt": "2026-03-11T08:27:15.464Z"
+    },
+    "213.csv": {
+      "status": "success",
+      "shortId": 213,
+      "transcriptsInserted": 672,
+      "startedAt": "2026-03-11T08:27:15.468Z",
+      "finishedAt": "2026-03-11T08:27:15.698Z"
+    },
+    "214.csv": {
+      "status": "success",
+      "shortId": 214,
+      "transcriptsInserted": 802,
+      "startedAt": "2026-03-11T08:27:15.702Z",
+      "finishedAt": "2026-03-11T08:27:15.940Z"
+    },
+    "215.csv": {
+      "status": "success",
+      "shortId": 215,
+      "transcriptsInserted": 299,
+      "startedAt": "2026-03-11T08:27:15.944Z",
+      "finishedAt": "2026-03-11T08:27:16.135Z"
+    },
+    "216.csv": {
+      "status": "success",
+      "shortId": 216,
+      "transcriptsInserted": 894,
+      "startedAt": "2026-03-11T08:27:16.139Z",
+      "finishedAt": "2026-03-11T08:27:16.375Z"
+    },
+    "217.csv": {
+      "status": "success",
+      "shortId": 217,
+      "transcriptsInserted": 752,
+      "startedAt": "2026-03-11T08:27:16.379Z",
+      "finishedAt": "2026-03-11T08:27:16.615Z"
+    },
+    "218.csv": {
+      "status": "success",
+      "shortId": 218,
+      "transcriptsInserted": 445,
+      "startedAt": "2026-03-11T08:27:16.618Z",
+      "finishedAt": "2026-03-11T08:27:16.859Z"
+    },
+    "219.csv": {
+      "status": "success",
+      "shortId": 219,
+      "transcriptsInserted": 308,
+      "startedAt": "2026-03-11T08:27:16.863Z",
+      "finishedAt": "2026-03-11T08:27:17.118Z"
+    },
+    "220.csv": {
+      "status": "success",
+      "shortId": 220,
+      "transcriptsInserted": 643,
+      "startedAt": "2026-03-11T08:27:17.122Z",
+      "finishedAt": "2026-03-11T08:27:17.349Z"
+    },
+    "221.csv": {
+      "status": "success",
+      "shortId": 221,
+      "transcriptsInserted": 400,
+      "startedAt": "2026-03-11T08:27:17.353Z",
+      "finishedAt": "2026-03-11T08:27:17.539Z"
+    },
+    "222.csv": {
+      "status": "success",
+      "shortId": 222,
+      "transcriptsInserted": 636,
+      "startedAt": "2026-03-11T08:27:17.543Z",
+      "finishedAt": "2026-03-11T08:27:17.738Z"
+    },
+    "223.csv": {
+      "status": "success",
+      "shortId": 223,
+      "transcriptsInserted": 602,
+      "startedAt": "2026-03-11T08:27:17.743Z",
+      "finishedAt": "2026-03-11T08:27:17.949Z"
+    },
+    "226.csv": {
+      "status": "success",
+      "shortId": 226,
+      "transcriptsInserted": 422,
+      "startedAt": "2026-03-11T08:27:17.953Z",
+      "finishedAt": "2026-03-11T08:27:18.144Z"
+    },
+    "227.csv": {
+      "status": "success",
+      "shortId": 227,
+      "transcriptsInserted": 273,
+      "startedAt": "2026-03-11T08:27:18.148Z",
+      "finishedAt": "2026-03-11T08:27:18.332Z"
+    },
+    "228.csv": {
+      "status": "success",
+      "shortId": 228,
+      "transcriptsInserted": 532,
+      "startedAt": "2026-03-11T08:27:18.337Z",
+      "finishedAt": "2026-03-11T08:27:18.564Z"
+    },
+    "229.csv": {
+      "status": "success",
+      "shortId": 229,
+      "transcriptsInserted": 731,
+      "startedAt": "2026-03-11T08:27:18.568Z",
+      "finishedAt": "2026-03-11T08:27:18.788Z"
+    },
+    "230.csv": {
+      "status": "success",
+      "shortId": 230,
+      "transcriptsInserted": 530,
+      "startedAt": "2026-03-11T08:27:18.792Z",
+      "finishedAt": "2026-03-11T08:27:18.989Z"
+    },
+    "36.csv": {
+      "status": "success",
+      "shortId": 36,
+      "transcriptsInserted": 209,
+      "startedAt": "2026-03-11T08:27:18.992Z",
+      "finishedAt": "2026-03-11T08:27:19.176Z"
+    },
+    "47.csv": {
+      "status": "success",
+      "shortId": 47,
+      "transcriptsInserted": 204,
+      "startedAt": "2026-03-11T08:27:19.180Z",
+      "finishedAt": "2026-03-11T08:27:19.358Z"
+    },
+    "51.csv": {
+      "status": "success",
+      "shortId": 51,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-11T08:27:19.362Z",
+      "finishedAt": "2026-03-11T08:27:19.483Z"
+    },
+    "71.csv": {
+      "status": "success",
+      "shortId": 71,
+      "transcriptsInserted": 212,
+      "startedAt": "2026-03-11T08:27:19.487Z",
+      "finishedAt": "2026-03-11T08:27:19.667Z"
+    },
+    "74.csv": {
+      "status": "success",
+      "shortId": 74,
+      "transcriptsInserted": 194,
+      "startedAt": "2026-03-11T08:27:19.671Z",
+      "finishedAt": "2026-03-11T08:27:19.854Z"
+    },
+    "78.csv": {
+      "status": "success",
+      "shortId": 78,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-11T08:27:19.857Z",
+      "finishedAt": "2026-03-11T08:27:19.977Z"
+    },
+    "80.csv": {
+      "status": "success",
+      "shortId": 80,
+      "transcriptsInserted": 452,
+      "startedAt": "2026-03-11T08:27:19.981Z",
+      "finishedAt": "2026-03-11T08:27:20.172Z"
+    },
+    "93.csv": {
+      "status": "success",
+      "shortId": 93,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-11T08:27:20.176Z",
+      "finishedAt": "2026-03-11T08:27:20.299Z"
+    },
+    "94.csv": {
+      "status": "success",
+      "shortId": 94,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-11T08:27:20.303Z",
+      "finishedAt": "2026-03-11T08:27:20.428Z"
+    },
+    "231.csv": {
+      "status": "success",
+      "shortId": 231,
+      "transcriptsInserted": 236,
+      "startedAt": "2026-03-11T08:28:31.447Z",
+      "finishedAt": "2026-03-11T08:28:31.726Z"
+    },
+    "232.csv": {
+      "status": "success",
+      "shortId": 232,
+      "transcriptsInserted": 751,
+      "startedAt": "2026-03-11T08:28:31.731Z",
+      "finishedAt": "2026-03-11T08:28:32.005Z"
+    },
+    "233.csv": {
+      "status": "success",
+      "shortId": 233,
+      "transcriptsInserted": 324,
+      "startedAt": "2026-03-11T08:28:32.016Z",
+      "finishedAt": "2026-03-11T08:28:32.246Z"
+    },
+    "234.csv": {
+      "status": "success",
+      "shortId": 234,
+      "transcriptsInserted": 408,
+      "startedAt": "2026-03-11T08:28:32.256Z",
+      "finishedAt": "2026-03-11T08:28:32.452Z"
+    },
+    "235.csv": {
+      "status": "success",
+      "shortId": 235,
+      "transcriptsInserted": 274,
+      "startedAt": "2026-03-11T08:28:32.468Z",
+      "finishedAt": "2026-03-11T08:28:32.691Z"
+    },
+    "236.csv": {
+      "status": "success",
+      "shortId": 236,
+      "transcriptsInserted": 205,
+      "startedAt": "2026-03-11T08:28:32.703Z",
+      "finishedAt": "2026-03-11T08:28:32.887Z"
+    },
+    "237.csv": {
+      "status": "success",
+      "shortId": 237,
+      "transcriptsInserted": 627,
+      "startedAt": "2026-03-11T08:28:32.897Z",
+      "finishedAt": "2026-03-11T08:28:33.106Z"
+    },
+    "238.csv": {
+      "status": "success",
+      "shortId": 238,
+      "transcriptsInserted": 753,
+      "startedAt": "2026-03-11T08:28:33.117Z",
+      "finishedAt": "2026-03-11T08:28:33.359Z"
+    },
+    "239.csv": {
+      "status": "success",
+      "shortId": 239,
+      "transcriptsInserted": 625,
+      "startedAt": "2026-03-11T08:28:33.365Z",
+      "finishedAt": "2026-03-11T08:28:33.590Z"
+    },
+    "240.csv": {
+      "status": "success",
+      "shortId": 240,
+      "transcriptsInserted": 286,
+      "startedAt": "2026-03-11T08:28:33.602Z",
+      "finishedAt": "2026-03-11T08:28:33.812Z"
+    },
+    "241.csv": {
+      "status": "success",
+      "shortId": 241,
+      "transcriptsInserted": 415,
+      "startedAt": "2026-03-11T08:28:33.818Z",
+      "finishedAt": "2026-03-11T08:28:34.008Z"
+    },
+    "242.csv": {
+      "status": "success",
+      "shortId": 242,
+      "transcriptsInserted": 449,
+      "startedAt": "2026-03-11T08:28:34.013Z",
+      "finishedAt": "2026-03-11T08:28:34.226Z"
+    },
+    "243.csv": {
+      "status": "success",
+      "shortId": 243,
+      "transcriptsInserted": 1118,
+      "startedAt": "2026-03-11T08:28:34.231Z",
+      "finishedAt": "2026-03-11T08:28:34.522Z"
+    },
+    "244.csv": {
+      "status": "success",
+      "shortId": 244,
+      "transcriptsInserted": 327,
+      "startedAt": "2026-03-11T08:28:34.535Z",
+      "finishedAt": "2026-03-11T08:28:34.740Z"
+    },
+    "245.csv": {
+      "status": "success",
+      "shortId": 245,
+      "transcriptsInserted": 766,
+      "startedAt": "2026-03-11T08:28:34.745Z",
+      "finishedAt": "2026-03-11T08:28:34.967Z"
+    },
+    "246.csv": {
+      "status": "success",
+      "shortId": 246,
+      "transcriptsInserted": 1291,
+      "startedAt": "2026-03-11T08:28:34.978Z",
+      "finishedAt": "2026-03-11T08:28:35.257Z"
+    },
+    "247.csv": {
+      "status": "success",
+      "shortId": 247,
+      "transcriptsInserted": 493,
+      "startedAt": "2026-03-11T08:28:35.268Z",
+      "finishedAt": "2026-03-11T08:28:35.472Z"
+    },
+    "248.csv": {
+      "status": "success",
+      "shortId": 248,
+      "transcriptsInserted": 277,
+      "startedAt": "2026-03-11T08:28:35.476Z",
+      "finishedAt": "2026-03-11T08:28:35.660Z"
+    },
+    "249.csv": {
+      "status": "success",
+      "shortId": 249,
+      "transcriptsInserted": 575,
+      "startedAt": "2026-03-11T08:28:35.670Z",
+      "finishedAt": "2026-03-11T08:28:35.872Z"
+    },
+    "250.csv": {
+      "status": "success",
+      "shortId": 250,
+      "transcriptsInserted": 721,
+      "startedAt": "2026-03-11T08:28:35.881Z",
+      "finishedAt": "2026-03-11T08:28:36.090Z"
+    },
+    "251.csv": {
+      "status": "success",
+      "shortId": 251,
+      "transcriptsInserted": 690,
+      "startedAt": "2026-03-11T08:28:36.096Z",
+      "finishedAt": "2026-03-11T08:28:36.296Z"
+    },
+    "252.csv": {
+      "status": "success",
+      "shortId": 252,
+      "transcriptsInserted": 1053,
+      "startedAt": "2026-03-11T08:28:36.300Z",
+      "finishedAt": "2026-03-11T08:28:36.588Z"
+    },
+    "253.csv": {
+      "status": "success",
+      "shortId": 253,
+      "transcriptsInserted": 874,
+      "startedAt": "2026-03-11T08:28:36.600Z",
+      "finishedAt": "2026-03-11T08:28:36.808Z"
+    },
+    "254.csv": {
+      "status": "success",
+      "shortId": 254,
+      "transcriptsInserted": 1112,
+      "startedAt": "2026-03-11T08:28:36.821Z",
+      "finishedAt": "2026-03-11T08:28:37.130Z"
+    },
+    "255.csv": {
+      "status": "success",
+      "shortId": 255,
+      "transcriptsInserted": 817,
+      "startedAt": "2026-03-11T08:28:37.142Z",
+      "finishedAt": "2026-03-11T08:28:37.402Z"
+    },
+    "256.csv": {
+      "status": "success",
+      "shortId": 256,
+      "transcriptsInserted": 430,
+      "startedAt": "2026-03-11T08:28:37.412Z",
+      "finishedAt": "2026-03-11T08:28:37.611Z"
+    },
+    "257.csv": {
+      "status": "success",
+      "shortId": 257,
+      "transcriptsInserted": 730,
+      "startedAt": "2026-03-11T08:28:37.616Z",
+      "finishedAt": "2026-03-11T08:28:37.841Z"
+    },
+    "258.csv": {
+      "status": "success",
+      "shortId": 258,
+      "transcriptsInserted": 897,
+      "startedAt": "2026-03-11T08:28:37.847Z",
+      "finishedAt": "2026-03-11T08:28:38.072Z"
+    },
+    "259.csv": {
+      "status": "success",
+      "shortId": 259,
+      "transcriptsInserted": 475,
+      "startedAt": "2026-03-11T08:28:38.079Z",
+      "finishedAt": "2026-03-11T08:28:38.292Z"
+    },
+    "260.csv": {
+      "status": "success",
+      "shortId": 260,
+      "transcriptsInserted": 426,
+      "startedAt": "2026-03-11T08:28:38.299Z",
+      "finishedAt": "2026-03-11T08:28:38.486Z"
+    },
+    "261.csv": {
+      "status": "success",
+      "shortId": 261,
+      "transcriptsInserted": 482,
+      "startedAt": "2026-03-11T08:28:38.493Z",
+      "finishedAt": "2026-03-11T08:28:38.686Z"
+    },
+    "262.csv": {
+      "status": "success",
+      "shortId": 262,
+      "transcriptsInserted": 708,
+      "startedAt": "2026-03-11T08:28:38.701Z",
+      "finishedAt": "2026-03-11T08:28:38.937Z"
+    },
+    "263.csv": {
+      "status": "success",
+      "shortId": 263,
+      "transcriptsInserted": 333,
+      "startedAt": "2026-03-11T08:28:38.949Z",
+      "finishedAt": "2026-03-11T08:28:39.152Z"
+    },
+    "264.csv": {
+      "status": "success",
+      "shortId": 264,
+      "transcriptsInserted": 599,
+      "startedAt": "2026-03-11T08:28:39.165Z",
+      "finishedAt": "2026-03-11T08:28:39.387Z"
+    },
+    "265.csv": {
+      "status": "success",
+      "shortId": 265,
+      "transcriptsInserted": 525,
+      "startedAt": "2026-03-11T08:28:39.392Z",
+      "finishedAt": "2026-03-11T08:28:39.623Z"
+    },
+    "266.csv": {
+      "status": "success",
+      "shortId": 266,
+      "transcriptsInserted": 742,
+      "startedAt": "2026-03-11T08:28:39.635Z",
+      "finishedAt": "2026-03-11T08:28:39.866Z"
+    },
+    "267.csv": {
+      "status": "success",
+      "shortId": 267,
+      "transcriptsInserted": 554,
+      "startedAt": "2026-03-11T08:28:39.871Z",
+      "finishedAt": "2026-03-11T08:28:40.097Z"
+    },
+    "268.csv": {
+      "status": "success",
+      "shortId": 268,
+      "transcriptsInserted": 811,
+      "startedAt": "2026-03-11T08:28:40.109Z",
+      "finishedAt": "2026-03-11T08:28:40.342Z"
+    },
+    "269.csv": {
+      "status": "success",
+      "shortId": 269,
+      "transcriptsInserted": 568,
+      "startedAt": "2026-03-11T08:28:40.346Z",
+      "finishedAt": "2026-03-11T08:28:40.543Z"
+    },
+    "270.csv": {
+      "status": "success",
+      "shortId": 270,
+      "transcriptsInserted": 299,
+      "startedAt": "2026-03-11T08:28:40.548Z",
+      "finishedAt": "2026-03-11T08:28:40.753Z"
+    },
+    "271.csv": {
+      "status": "success",
+      "shortId": 271,
+      "transcriptsInserted": 473,
+      "startedAt": "2026-03-11T08:28:40.766Z",
+      "finishedAt": "2026-03-11T08:28:40.969Z"
+    },
+    "272.csv": {
+      "status": "success",
+      "shortId": 272,
+      "transcriptsInserted": 561,
+      "startedAt": "2026-03-11T08:28:40.980Z",
+      "finishedAt": "2026-03-11T08:28:41.181Z"
+    },
+    "273.csv": {
+      "status": "success",
+      "shortId": 273,
+      "transcriptsInserted": 305,
+      "startedAt": "2026-03-11T08:28:41.192Z",
+      "finishedAt": "2026-03-11T08:28:41.382Z"
+    },
+    "274.csv": {
+      "status": "success",
+      "shortId": 274,
+      "transcriptsInserted": 460,
+      "startedAt": "2026-03-11T08:28:41.386Z",
+      "finishedAt": "2026-03-11T08:28:41.611Z"
+    },
+    "275.csv": {
+      "status": "success",
+      "shortId": 275,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-11T08:28:41.623Z",
+      "finishedAt": "2026-03-11T08:28:41.752Z"
+    },
+    "276.csv": {
+      "status": "success",
+      "shortId": 276,
+      "transcriptsInserted": 509,
+      "startedAt": "2026-03-11T08:28:41.762Z",
+      "finishedAt": "2026-03-11T08:28:41.977Z"
+    },
+    "277.csv": {
+      "status": "success",
+      "shortId": 277,
+      "transcriptsInserted": 547,
+      "startedAt": "2026-03-11T08:28:41.982Z",
+      "finishedAt": "2026-03-11T08:28:42.245Z"
+    },
+    "278.csv": {
+      "status": "success",
+      "shortId": 278,
+      "transcriptsInserted": 696,
+      "startedAt": "2026-03-11T08:28:42.253Z",
+      "finishedAt": "2026-03-11T08:28:42.455Z"
+    },
+    "279.csv": {
+      "status": "success",
+      "shortId": 279,
+      "transcriptsInserted": 124,
+      "startedAt": "2026-03-11T08:28:42.459Z",
+      "finishedAt": "2026-03-11T08:28:42.646Z"
+    },
+    "280.csv": {
+      "status": "success",
+      "shortId": 280,
+      "transcriptsInserted": 675,
+      "startedAt": "2026-03-11T08:28:42.658Z",
+      "finishedAt": "2026-03-11T08:28:42.882Z"
+    },
+    "281.csv": {
+      "status": "success",
+      "shortId": 281,
+      "transcriptsInserted": 477,
+      "startedAt": "2026-03-11T08:29:46.431Z",
+      "finishedAt": "2026-03-11T08:29:46.715Z"
+    },
+    "282.csv": {
+      "status": "success",
+      "shortId": 282,
+      "transcriptsInserted": 936,
+      "startedAt": "2026-03-11T08:29:46.726Z",
+      "finishedAt": "2026-03-11T08:29:46.990Z"
+    },
+    "283.csv": {
+      "status": "success",
+      "shortId": 283,
+      "transcriptsInserted": 1401,
+      "startedAt": "2026-03-11T08:29:47.002Z",
+      "finishedAt": "2026-03-11T08:29:47.360Z"
+    },
+    "284.csv": {
+      "status": "success",
+      "shortId": 284,
+      "transcriptsInserted": 145,
+      "startedAt": "2026-03-11T08:29:47.371Z",
+      "finishedAt": "2026-03-11T08:29:47.556Z"
+    },
+    "285.csv": {
+      "status": "success",
+      "shortId": 285,
+      "transcriptsInserted": 916,
+      "startedAt": "2026-03-11T08:29:47.562Z",
+      "finishedAt": "2026-03-11T08:29:47.772Z"
+    },
+    "286.csv": {
+      "status": "success",
+      "shortId": 286,
+      "transcriptsInserted": 767,
+      "startedAt": "2026-03-11T08:29:47.785Z",
+      "finishedAt": "2026-03-11T08:29:48.011Z"
+    },
+    "287.csv": {
+      "status": "success",
+      "shortId": 287,
+      "transcriptsInserted": 1096,
+      "startedAt": "2026-03-11T08:29:48.020Z",
+      "finishedAt": "2026-03-11T08:29:48.281Z"
+    },
+    "288.csv": {
+      "status": "success",
+      "shortId": 288,
+      "transcriptsInserted": 495,
+      "startedAt": "2026-03-11T08:29:48.289Z",
+      "finishedAt": "2026-03-11T08:29:48.479Z"
+    },
+    "289.csv": {
+      "status": "success",
+      "shortId": 289,
+      "transcriptsInserted": 203,
+      "startedAt": "2026-03-11T08:29:48.484Z",
+      "finishedAt": "2026-03-11T08:29:48.661Z"
+    },
+    "290.csv": {
+      "status": "success",
+      "shortId": 290,
+      "transcriptsInserted": 182,
+      "startedAt": "2026-03-11T08:29:48.671Z",
+      "finishedAt": "2026-03-11T08:29:48.856Z"
+    },
+    "291.csv": {
+      "status": "success",
+      "shortId": 291,
+      "transcriptsInserted": 1,
+      "startedAt": "2026-03-11T08:29:48.866Z",
+      "finishedAt": "2026-03-11T08:29:49.030Z"
+    },
+    "292.csv": {
+      "status": "success",
+      "shortId": 292,
+      "transcriptsInserted": 453,
+      "startedAt": "2026-03-11T08:29:49.034Z",
+      "finishedAt": "2026-03-11T08:29:49.226Z"
+    },
+    "293.csv": {
+      "status": "success",
+      "shortId": 293,
+      "transcriptsInserted": 288,
+      "startedAt": "2026-03-11T08:29:49.231Z",
+      "finishedAt": "2026-03-11T08:29:49.413Z"
+    },
+    "294.csv": {
+      "status": "success",
+      "shortId": 294,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-11T08:29:49.420Z",
+      "finishedAt": "2026-03-11T08:29:49.540Z"
+    },
+    "295.csv": {
+      "status": "success",
+      "shortId": 295,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-11T08:29:49.548Z",
+      "finishedAt": "2026-03-11T08:29:49.683Z"
+    },
+    "296.csv": {
+      "status": "success",
+      "shortId": 296,
+      "transcriptsInserted": 324,
+      "startedAt": "2026-03-11T08:29:49.690Z",
+      "finishedAt": "2026-03-11T08:29:49.881Z"
+    },
+    "297.csv": {
+      "status": "success",
+      "shortId": 297,
+      "transcriptsInserted": 453,
+      "startedAt": "2026-03-11T08:29:49.885Z",
+      "finishedAt": "2026-03-11T08:29:50.101Z"
+    },
+    "298.csv": {
+      "status": "success",
+      "shortId": 298,
+      "transcriptsInserted": 489,
+      "startedAt": "2026-03-11T08:29:50.108Z",
+      "finishedAt": "2026-03-11T08:29:50.312Z"
+    },
+    "299.csv": {
+      "status": "success",
+      "shortId": 299,
+      "transcriptsInserted": 863,
+      "startedAt": "2026-03-11T08:29:50.320Z",
+      "finishedAt": "2026-03-11T08:29:50.541Z"
+    },
+    "300.csv": {
+      "status": "success",
+      "shortId": 300,
+      "transcriptsInserted": 598,
+      "startedAt": "2026-03-11T08:29:50.546Z",
+      "finishedAt": "2026-03-11T08:29:50.747Z"
+    },
+    "301.csv": {
+      "status": "success",
+      "shortId": 301,
+      "transcriptsInserted": 586,
+      "startedAt": "2026-03-11T08:29:50.759Z",
+      "finishedAt": "2026-03-11T08:29:50.974Z"
+    },
+    "302.csv": {
+      "status": "success",
+      "shortId": 302,
+      "transcriptsInserted": 674,
+      "startedAt": "2026-03-11T08:29:50.980Z",
+      "finishedAt": "2026-03-11T08:29:51.192Z"
+    },
+    "303.csv": {
+      "status": "success",
+      "shortId": 303,
+      "transcriptsInserted": 1169,
+      "startedAt": "2026-03-11T08:29:51.196Z",
+      "finishedAt": "2026-03-11T08:29:51.491Z"
+    },
+    "304.csv": {
+      "status": "success",
+      "shortId": 304,
+      "transcriptsInserted": 1504,
+      "startedAt": "2026-03-11T08:29:51.496Z",
+      "finishedAt": "2026-03-11T08:29:51.803Z"
+    },
+    "305.csv": {
+      "status": "success",
+      "shortId": 305,
+      "transcriptsInserted": 1623,
+      "startedAt": "2026-03-11T08:29:51.808Z",
+      "finishedAt": "2026-03-11T08:29:52.153Z"
+    },
+    "306.csv": {
+      "status": "success",
+      "shortId": 306,
+      "transcriptsInserted": 1022,
+      "startedAt": "2026-03-11T08:29:52.161Z",
+      "finishedAt": "2026-03-11T08:29:52.462Z"
+    },
+    "307.csv": {
+      "status": "success",
+      "shortId": 307,
+      "transcriptsInserted": 712,
+      "startedAt": "2026-03-11T08:29:52.471Z",
+      "finishedAt": "2026-03-11T08:29:52.697Z"
+    },
+    "308.csv": {
+      "status": "success",
+      "shortId": 308,
+      "transcriptsInserted": 476,
+      "startedAt": "2026-03-11T08:29:52.702Z",
+      "finishedAt": "2026-03-11T08:29:52.913Z"
+    },
+    "309.csv": {
+      "status": "success",
+      "shortId": 309,
+      "transcriptsInserted": 809,
+      "startedAt": "2026-03-11T08:29:52.918Z",
+      "finishedAt": "2026-03-11T08:29:53.146Z"
+    },
+    "310.csv": {
+      "status": "success",
+      "shortId": 310,
+      "transcriptsInserted": 370,
+      "startedAt": "2026-03-11T08:29:53.154Z",
+      "finishedAt": "2026-03-11T08:29:53.342Z"
+    },
+    "311.csv": {
+      "status": "success",
+      "shortId": 311,
+      "transcriptsInserted": 664,
+      "startedAt": "2026-03-11T08:29:53.346Z",
+      "finishedAt": "2026-03-11T08:29:53.547Z"
+    },
+    "312.csv": {
+      "status": "success",
+      "shortId": 312,
+      "transcriptsInserted": 1220,
+      "startedAt": "2026-03-11T08:29:53.558Z",
+      "finishedAt": "2026-03-11T08:29:53.852Z"
+    },
+    "313.csv": {
+      "status": "success",
+      "shortId": 313,
+      "transcriptsInserted": 341,
+      "startedAt": "2026-03-11T08:29:53.865Z",
+      "finishedAt": "2026-03-11T08:29:54.076Z"
+    },
+    "314.csv": {
+      "status": "success",
+      "shortId": 314,
+      "transcriptsInserted": 346,
+      "startedAt": "2026-03-11T08:29:54.088Z",
+      "finishedAt": "2026-03-11T08:29:54.293Z"
+    },
+    "315.csv": {
+      "status": "success",
+      "shortId": 315,
+      "transcriptsInserted": 102,
+      "startedAt": "2026-03-11T08:29:54.303Z",
+      "finishedAt": "2026-03-11T08:29:54.482Z"
+    },
+    "316.csv": {
+      "status": "success",
+      "shortId": 316,
+      "transcriptsInserted": 636,
+      "startedAt": "2026-03-11T08:29:54.487Z",
+      "finishedAt": "2026-03-11T08:29:54.722Z"
+    },
+    "317.csv": {
+      "status": "success",
+      "shortId": 317,
+      "transcriptsInserted": 410,
+      "startedAt": "2026-03-11T08:29:54.727Z",
+      "finishedAt": "2026-03-11T08:29:54.928Z"
+    },
+    "318.csv": {
+      "status": "success",
+      "shortId": 318,
+      "transcriptsInserted": 192,
+      "startedAt": "2026-03-11T08:29:54.938Z",
+      "finishedAt": "2026-03-11T08:29:55.127Z"
+    },
+    "319.csv": {
+      "status": "success",
+      "shortId": 319,
+      "transcriptsInserted": 442,
+      "startedAt": "2026-03-11T08:29:55.137Z",
+      "finishedAt": "2026-03-11T08:29:55.357Z"
+    },
+    "320.csv": {
+      "status": "success",
+      "shortId": 320,
+      "transcriptsInserted": 662,
+      "startedAt": "2026-03-11T08:29:55.369Z",
+      "finishedAt": "2026-03-11T08:29:55.577Z"
+    },
+    "321.csv": {
+      "status": "success",
+      "shortId": 321,
+      "transcriptsInserted": 266,
+      "startedAt": "2026-03-11T08:29:55.581Z",
+      "finishedAt": "2026-03-11T08:29:55.777Z"
+    },
+    "322.csv": {
+      "status": "success",
+      "shortId": 322,
+      "transcriptsInserted": 730,
+      "startedAt": "2026-03-11T08:29:55.787Z",
+      "finishedAt": "2026-03-11T08:29:55.987Z"
+    },
+    "323.csv": {
+      "status": "success",
+      "shortId": 323,
+      "transcriptsInserted": 407,
+      "startedAt": "2026-03-11T08:29:55.992Z",
+      "finishedAt": "2026-03-11T08:29:56.216Z"
+    },
+    "324.csv": {
+      "status": "success",
+      "shortId": 324,
+      "transcriptsInserted": 267,
+      "startedAt": "2026-03-11T08:29:56.225Z",
+      "finishedAt": "2026-03-11T08:29:56.417Z"
+    },
+    "325.csv": {
+      "status": "success",
+      "shortId": 325,
+      "transcriptsInserted": 36,
+      "startedAt": "2026-03-11T08:29:56.430Z",
+      "finishedAt": "2026-03-11T08:29:56.598Z"
+    },
+    "326.csv": {
+      "status": "success",
+      "shortId": 326,
+      "transcriptsInserted": 290,
+      "startedAt": "2026-03-11T08:29:56.608Z",
+      "finishedAt": "2026-03-11T08:29:56.796Z"
+    },
+    "327.csv": {
+      "status": "success",
+      "shortId": 327,
+      "transcriptsInserted": 657,
+      "startedAt": "2026-03-11T08:29:56.808Z",
+      "finishedAt": "2026-03-11T08:29:57.028Z"
+    },
+    "328.csv": {
+      "status": "success",
+      "shortId": 328,
+      "transcriptsInserted": 151,
+      "startedAt": "2026-03-11T08:29:57.033Z",
+      "finishedAt": "2026-03-11T08:29:57.226Z"
+    },
+    "329.csv": {
+      "status": "success",
+      "shortId": 329,
+      "transcriptsInserted": 1018,
+      "startedAt": "2026-03-11T08:29:57.233Z",
+      "finishedAt": "2026-03-11T08:29:57.504Z"
+    },
+    "330.csv": {
+      "status": "success",
+      "shortId": 330,
+      "transcriptsInserted": 523,
+      "startedAt": "2026-03-11T08:29:57.516Z",
+      "finishedAt": "2026-03-11T08:29:57.721Z"
+    },
+    "331.csv": {
+      "status": "success",
+      "shortId": 331,
+      "transcriptsInserted": 755,
+      "startedAt": "2026-03-11T08:31:02.409Z",
+      "finishedAt": "2026-03-11T08:31:02.772Z"
+    },
+    "332.csv": {
+      "status": "success",
+      "shortId": 332,
+      "transcriptsInserted": 1026,
+      "startedAt": "2026-03-11T08:31:02.781Z",
+      "finishedAt": "2026-03-11T08:31:03.099Z"
+    },
+    "333.csv": {
+      "status": "success",
+      "shortId": 333,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-11T08:31:03.104Z",
+      "finishedAt": "2026-03-11T08:31:03.239Z"
+    },
+    "334.csv": {
+      "status": "success",
+      "shortId": 334,
+      "transcriptsInserted": 1,
+      "startedAt": "2026-03-11T08:31:03.248Z",
+      "finishedAt": "2026-03-11T08:31:03.430Z"
+    },
+    "335.csv": {
+      "status": "success",
+      "shortId": 335,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-11T08:31:03.435Z",
+      "finishedAt": "2026-03-11T08:31:03.569Z"
+    },
+    "336.csv": {
+      "status": "success",
+      "shortId": 336,
+      "transcriptsInserted": 199,
+      "startedAt": "2026-03-11T08:31:03.582Z",
+      "finishedAt": "2026-03-11T08:31:03.789Z"
+    },
+    "337.csv": {
+      "status": "success",
+      "shortId": 337,
+      "transcriptsInserted": 207,
+      "startedAt": "2026-03-11T08:31:03.802Z",
+      "finishedAt": "2026-03-11T08:31:04.014Z"
+    },
+    "338.csv": {
+      "status": "success",
+      "shortId": 338,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-11T08:31:04.028Z",
+      "finishedAt": "2026-03-11T08:31:04.169Z"
+    },
+    "339.csv": {
+      "status": "success",
+      "shortId": 339,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-11T08:31:04.173Z",
+      "finishedAt": "2026-03-11T08:31:04.309Z"
+    },
+    "340.csv": {
+      "status": "success",
+      "shortId": 340,
+      "transcriptsInserted": 931,
+      "startedAt": "2026-03-11T08:31:04.314Z",
+      "finishedAt": "2026-03-11T08:31:04.565Z"
+    },
+    "341.csv": {
+      "status": "success",
+      "shortId": 341,
+      "transcriptsInserted": 821,
+      "startedAt": "2026-03-11T08:31:04.577Z",
+      "finishedAt": "2026-03-11T08:31:04.815Z"
+    },
+    "342.csv": {
+      "status": "success",
+      "shortId": 342,
+      "transcriptsInserted": 1059,
+      "startedAt": "2026-03-11T08:31:04.826Z",
+      "finishedAt": "2026-03-11T08:31:05.155Z"
+    },
+    "343.csv": {
+      "status": "success",
+      "shortId": 343,
+      "transcriptsInserted": 1,
+      "startedAt": "2026-03-11T08:31:05.168Z",
+      "finishedAt": "2026-03-11T08:31:05.350Z"
+    },
+    "344.csv": {
+      "status": "success",
+      "shortId": 344,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-11T08:31:05.362Z",
+      "finishedAt": "2026-03-11T08:31:05.507Z"
+    },
+    "345.csv": {
+      "status": "success",
+      "shortId": 345,
+      "transcriptsInserted": 873,
+      "startedAt": "2026-03-11T08:31:05.512Z",
+      "finishedAt": "2026-03-11T08:31:05.745Z"
+    },
+    "346.csv": {
+      "status": "success",
+      "shortId": 346,
+      "transcriptsInserted": 269,
+      "startedAt": "2026-03-11T08:31:05.757Z",
+      "finishedAt": "2026-03-11T08:31:05.961Z"
+    },
+    "347.csv": {
+      "status": "success",
+      "shortId": 347,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-11T08:31:05.970Z",
+      "finishedAt": "2026-03-11T08:31:06.113Z"
+    },
+    "348.csv": {
+      "status": "success",
+      "shortId": 348,
+      "transcriptsInserted": 236,
+      "startedAt": "2026-03-11T08:31:06.123Z",
+      "finishedAt": "2026-03-11T08:31:06.338Z"
+    },
+    "349.csv": {
+      "status": "success",
+      "shortId": 349,
+      "transcriptsInserted": 221,
+      "startedAt": "2026-03-11T08:31:06.345Z",
+      "finishedAt": "2026-03-11T08:31:06.539Z"
+    },
+    "350.csv": {
+      "status": "success",
+      "shortId": 350,
+      "transcriptsInserted": 694,
+      "startedAt": "2026-03-11T08:31:06.548Z",
+      "finishedAt": "2026-03-11T08:31:06.785Z"
+    },
+    "351.csv": {
+      "status": "success",
+      "shortId": 351,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-11T08:31:06.799Z",
+      "finishedAt": "2026-03-11T08:31:06.939Z"
+    },
+    "352.csv": {
+      "status": "success",
+      "shortId": 352,
+      "transcriptsInserted": 0,
+      "startedAt": "2026-03-11T08:31:06.944Z",
+      "finishedAt": "2026-03-11T08:31:07.081Z"
+    },
+    "353.csv": {
+      "status": "success",
+      "shortId": 353,
+      "transcriptsInserted": 192,
+      "startedAt": "2026-03-11T08:31:07.092Z",
+      "finishedAt": "2026-03-11T08:31:07.303Z"
+    },
+    "354.csv": {
+      "status": "success",
+      "shortId": 354,
+      "transcriptsInserted": 234,
+      "startedAt": "2026-03-11T08:31:07.316Z",
+      "finishedAt": "2026-03-11T08:31:07.510Z"
+    },
+    "355.csv": {
+      "status": "success",
+      "shortId": 355,
+      "transcriptsInserted": 572,
+      "startedAt": "2026-03-11T08:31:07.521Z",
+      "finishedAt": "2026-03-11T08:31:07.726Z"
+    },
+    "356.csv": {
+      "status": "success",
+      "shortId": 356,
+      "transcriptsInserted": 198,
+      "startedAt": "2026-03-11T08:31:07.732Z",
+      "finishedAt": "2026-03-11T08:31:07.933Z"
+    },
+    "357.csv": {
+      "status": "success",
+      "shortId": 357,
+      "transcriptsInserted": 258,
+      "startedAt": "2026-03-11T08:31:07.949Z",
+      "finishedAt": "2026-03-11T08:31:08.148Z"
+    },
+    "359.csv": {
+      "status": "success",
+      "shortId": 359,
+      "transcriptsInserted": 187,
+      "startedAt": "2026-03-11T08:31:08.158Z",
+      "finishedAt": "2026-03-11T08:31:08.343Z"
+    },
+    "360.csv": {
+      "status": "success",
+      "shortId": 360,
+      "transcriptsInserted": 293,
+      "startedAt": "2026-03-11T08:31:08.353Z",
+      "finishedAt": "2026-03-11T08:31:08.544Z"
+    },
+    "361.csv": {
+      "status": "success",
+      "shortId": 361,
+      "transcriptsInserted": 96,
+      "startedAt": "2026-03-11T08:31:08.550Z",
+      "finishedAt": "2026-03-11T08:31:08.739Z"
+    },
+    "362.csv": {
+      "status": "success",
+      "shortId": 362,
+      "transcriptsInserted": 81,
+      "startedAt": "2026-03-11T08:40:52.229Z",
+      "finishedAt": "2026-03-11T08:40:52.432Z"
+    },
+    "363.csv": {
+      "status": "success",
+      "shortId": 363,
+      "transcriptsInserted": 533,
+      "startedAt": "2026-03-11T08:40:52.439Z",
+      "finishedAt": "2026-03-11T08:40:52.717Z"
+    },
+    "364.csv": {
+      "status": "success",
+      "shortId": 364,
+      "transcriptsInserted": 124,
+      "startedAt": "2026-03-11T08:40:52.723Z",
+      "finishedAt": "2026-03-11T08:40:52.893Z"
     }
   }
 }

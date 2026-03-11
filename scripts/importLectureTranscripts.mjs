@@ -1,4 +1,4 @@
-import fs from "node:fs";
+﻿import fs from "node:fs";
 import path from "node:path";
 import { MongoClient, ObjectId } from "mongodb";
 import { parse } from "csv-parse/sync";
@@ -111,7 +111,9 @@ function parseExportFile(exportPath) {
   }
 
   const byStem = new Map();
+  const byShortId = new Map();
   const duplicateStems = [];
+  const duplicateShortIds = [];
   const missingShortId = [];
   const missingAudio = [];
 
@@ -121,6 +123,18 @@ function parseExportFile(exportPath) {
 
     if (!hasShortId) missingShortId.push(entry);
     if (!hasAudio) missingAudio.push(entry);
+
+    if (hasShortId) {
+      const existingByShortId = byShortId.get(entry.shortId);
+      if (!existingByShortId) {
+        byShortId.set(entry.shortId, [entry]);
+      } else {
+        existingByShortId.push(entry);
+        if (existingByShortId.length > 1) {
+          duplicateShortIds.push({ shortId: entry.shortId, count: existingByShortId.length });
+        }
+      }
+    }
 
     const stems = [
       normalizeStem(entry.audioFileName),
@@ -150,7 +164,8 @@ function parseExportFile(exportPath) {
   return {
     entries,
     byStem,
-    issues: { duplicateStems, missingShortId, missingAudio },
+    byShortId,
+    issues: { duplicateStems, duplicateShortIds, missingShortId, missingAudio },
   };
 }
 
@@ -432,6 +447,7 @@ async function main() {
     },
     issues: {
       exportDuplicateStems: [],
+      exportDuplicateShortIds: [],
       exportMissingShortId: [],
       exportMissingAudio: [],
       duplicateTranscriptStemFiles: [],
@@ -461,6 +477,7 @@ async function main() {
 
   const exportData = parseExportFile(options.exportPath);
   report.issues.exportDuplicateStems = exportData.issues.duplicateStems;
+  report.issues.exportDuplicateShortIds = exportData.issues.duplicateShortIds;
   report.issues.exportMissingShortId = exportData.issues.missingShortId.map((x) => ({
     titleArabic: x.titleArabic || "",
     audioFileName: x.audioFileName || "",
@@ -479,49 +496,33 @@ async function main() {
 
   report.progress.totalCsvDiscovered = csvFiles.length;
 
-  const duplicateStemMap = new Map();
-  for (const filePath of csvFiles) {
-    const fileName = path.basename(filePath);
-    const stem = normalizeStem(fileName.replace(/\.csv$/i, ""));
-    if (!duplicateStemMap.has(stem)) duplicateStemMap.set(stem, []);
-    duplicateStemMap.get(stem).push(fileName);
-  }
-
-  for (const [stem, files] of duplicateStemMap.entries()) {
-    if (files.length > 1) {
-      report.issues.duplicateTranscriptStemFiles.push({ stem, files });
-    }
-  }
-
   const mapped = [];
-  const seenStems = new Set();
 
   for (const csvPath of csvFiles) {
     const csvFileName = path.basename(csvPath);
     const baseName = csvFileName.replace(/\.csv$/i, "");
-    const stem = normalizeStem(baseName);
+    const shortId = Number(baseName);
 
-    if (seenStems.has(stem)) {
-      report.skipped.push({ csvFileName, reason: "duplicate-transcript-stem" });
+    if (!Number.isFinite(shortId)) {
+      report.issues.missingShortIdForMatch.push(csvFileName);
       continue;
     }
-    seenStems.add(stem);
 
-    const candidates = exportData.byStem.get(stem) || [];
-    const { candidate, reason } = pickBestCandidate(candidates, baseName);
-
-    if (!candidate) {
-      if (reason === "no-candidate") {
-        report.issues.missingMapping.push(csvFileName);
-      } else if (reason === "missing-shortid") {
-        report.issues.missingShortIdForMatch.push(csvFileName);
-      } else if (reason === "missing-audio") {
-        report.issues.missingAudioForMatch.push(csvFileName);
-      } else {
-        report.issues.ambiguousMatches.push({ csvFileName, reason, candidates: candidates.map((x) => ({ shortId: x.shortId ?? null, audioFileName: x.audioFileName || "" })) });
-      }
+    const candidates = exportData.byShortId.get(shortId) || [];
+    if (candidates.length === 0) {
+      report.issues.missingMapping.push(csvFileName);
       continue;
     }
+    if (candidates.length > 1) {
+      report.issues.ambiguousMatches.push({
+        csvFileName,
+        reason: "duplicate-shortid",
+        candidates: candidates.map((x) => ({ shortId: x.shortId ?? null, audioFileName: x.audioFileName || "" })),
+      });
+      continue;
+    }
+
+    const candidate = candidates[0];
 
     mapped.push({
       csvPath,
@@ -556,7 +557,11 @@ async function main() {
     }
   }
 
-  report.progress.unmatched = report.issues.missingMapping.length + report.issues.missingShortIdForMatch.length + report.issues.missingAudioForMatch.length + report.issues.ambiguousMatches.length;
+  report.progress.unmatched =
+    report.issues.missingMapping.length +
+    report.issues.missingShortIdForMatch.length +
+    report.issues.missingAudioForMatch.length +
+    report.issues.ambiguousMatches.length;
 
   const checkpoint = loadCheckpoint(options.checkpointPath, options.resetCheckpoint);
 

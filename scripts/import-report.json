@@ -1,5 +1,5 @@
 {
-  "runAt": "2026-03-09T12:06:52.044Z",
+  "runAt": "2026-03-11T08:40:50.545Z",
   "options": {
     "exportPath": "D:\\makesomething-codex-app-migration\\makesomething-codex-app-migration\\sample-app\\data-export.txt",
     "csvDir": "D:\\makesomething-codex-app-migration\\makesomething-codex-app-migration\\sample-app\\transcripts",
@@ -11,32 +11,12 @@
   },
   "issues": {
     "exportDuplicateStems": [],
+    "exportDuplicateShortIds": [],
     "exportMissingShortId": [],
     "exportMissingAudio": [],
-    "duplicateTranscriptStemFiles": [
-      {
-        "stem": "ºÄÄÈÉÄËÂºÚÈºÄÚÂºÀÄËÀºÀÅÈºÄÚÅºÀÀ",
-        "files": [
-          "╪º┘ä╪¬╪╣┘ä┘è┘é ╪╣┘ä┘ë ┘â╪¬╪º╪¿ ∩┤┐╪¬╪ú╪│┘è╪│ ╪º┘ä╪ú╪¡┘â╪º┘à ╪╣┘ä┘ë ┘à╪º ╪╡╪¡ ┘à┘å ╪«┘è╪▒ ╪º┘ä╪ú┘å╪º┘à ╪¿╪┤╪▒╪¡ ╪╣┘à╪»╪⌐ (1).csv",
-          "╪º┘ä╪¬╪╣┘ä┘è┘é ╪╣┘ä┘ë ┘â╪¬╪º╪¿ ∩┤┐╪¬╪ú╪│┘è╪│ ╪º┘ä╪ú╪¡┘â╪º┘à ╪╣┘ä┘ë ┘à╪º ╪╡╪¡ ┘à┘å ╪«┘è╪▒ ╪º┘ä╪ú┘å╪º┘à ╪¿╪┤╪▒╪¡ ╪╣┘à╪»╪⌐ (2).csv",
-          "╪º┘ä╪¬╪╣┘ä┘è┘é ╪╣┘ä┘ë ┘â╪¬╪º╪¿ ∩┤┐╪¬╪ú╪│┘è╪│ ╪º┘ä╪ú╪¡┘â╪º┘à ╪╣┘ä┘ë ┘à╪º ╪╡╪¡ ┘à┘å ╪«┘è╪▒ ╪º┘ä╪ú┘å╪º┘à ╪¿╪┤╪▒╪¡ ╪╣┘à╪»╪⌐ (3).csv",
-          "╪º┘ä╪¬╪╣┘ä┘è┘é ╪╣┘ä┘ë ┘â╪¬╪º╪¿ ∩┤┐╪¬╪ú╪│┘è╪│ ╪º┘ä╪ú╪¡┘â╪º┘à ╪╣┘ä┘ë ┘à╪º ╪╡╪¡ ┘à┘å ╪«┘è╪▒ ╪º┘ä╪ú┘å╪º┘à ╪¿╪┤╪▒╪¡ ╪╣┘à╪»╪⌐.csv",
-          "╪º┘ä╪¬╪╣┘ä┘è┘é ╪╣┘ä┘ë ┘â╪¬╪º╪¿ ╪¬╪ú╪│┘è╪│ ╪º┘ä╪ú╪¡┘â╪º┘à ╪╣┘ä┘ë ┘à╪º ╪╡╪¡ ┘à┘å ╪«┘è╪▒ ╪º┘ä╪ú┘å╪º┘à ╪¿╪┤╪▒╪¡ ╪╣┘à╪»╪⌐ (1).csv",
-          "╪º┘ä╪¬╪╣┘ä┘è┘é ╪╣┘ä┘ë ┘â╪¬╪º╪¿ ╪¬╪ú╪│┘è╪│ ╪º┘ä╪ú╪¡┘â╪º┘à ╪╣┘ä┘ë ┘à╪º ╪╡╪¡ ┘à┘å ╪«┘è╪▒ ╪º┘ä╪ú┘å╪º┘à ╪¿╪┤╪▒╪¡ ╪╣┘à╪»╪⌐ (2).csv",
-          "╪º┘ä╪¬╪╣┘ä┘è┘é ╪╣┘ä┘ë ┘â╪¬╪º╪¿ ╪¬╪ú╪│┘è╪│ ╪º┘ä╪ú╪¡┘â╪º┘à ╪╣┘ä┘ë ┘à╪º ╪╡╪¡ ┘à┘å ╪«┘è╪▒ ╪º┘ä╪ú┘å╪º┘à ╪¿╪┤╪▒╪¡ ╪╣┘à╪»╪⌐ (3).csv",
-          "╪º┘ä╪¬╪╣┘ä┘è┘é ╪╣┘ä┘ë ┘â╪¬╪º╪¿ ╪¬╪ú╪│┘è╪│ ╪º┘ä╪ú╪¡┘â╪º┘à ╪╣┘ä┘ë ┘à╪º ╪╡╪¡ ┘à┘å ╪«┘è╪▒ ╪º┘ä╪ú┘å╪º┘à ╪¿╪┤╪▒╪¡ ╪╣┘à╪»╪⌐.csv"
-        ]
-      }
-    ],
+    "duplicateTranscriptStemFiles": [],
     "duplicateShortIdAssignments": [],
-    "missingMapping": [
-      "qlisen audio 2026-01-15 14-13-42.csv",
-      "Ringtone AUD-20251211-WA0008.csv",
-      "┘à┘ü╪º╪│╪» ╪º┘ä┘à╪╕╪º┘ç╪▒╪º╪¬.csv",
-      "┘â┘ä┘à╪⌐ ┘ä╪º╪¿┘å ╪╣┘é┘è┘ä ╪╣┘å ╪º┘ä┘å╪¼┘à┘è ╪▒╪¡┘à┘ç ╪º┘ä┘ä┘ç.csv",
-      "╪º┘ä╪¬╪╣┘ä┘è┘é ╪╣┘ä┘ë ┘â╪¬╪º╪¿ ∩┤┐╪¬╪ú╪│┘è╪│ ╪º┘ä╪ú╪¡┘â╪º┘à ╪╣┘ä┘ë ┘à╪º ╪╡╪¡ ┘à┘å ╪«┘è╪▒ ╪º┘ä╪ú┘å╪º┘à ╪¿╪┤╪▒╪¡ ╪╣┘à╪»╪⌐ (1).csv",
-      "╪º┘ä╪¬╪╣┘ä┘è┘é ╪╣┘ä┘ë ╪¬╪ú╪│┘è╪│ ╪º┘ä╪ú╪¡┘â╪º┘à ╪╣┘ä┘ë ┘à╪º ╪╡╪¡ ┘à┘å ╪«┘è╪▒ ╪º┘ä╪ú┘å╪º┘à ╪¿╪┤╪▒╪¡ zos88VZk4dU.csv"
-    ],
+    "missingMapping": [],
     "missingShortIdForMatch": [],
     "missingAudioForMatch": [],
     "ambiguousMatches": [],
@@ -45,64 +25,50 @@
     "dbDuplicateShortIds": []
   },
   "progress": {
-    "totalCsvDiscovered": 15,
-    "matchedForImport": 1,
+    "totalCsvDiscovered": 4,
+    "matchedForImport": 3,
     "skippedByResume": 1,
-    "importedOk": 1,
+    "importedOk": 3,
     "failed": 0,
-    "transcriptsInserted": 767,
-    "unmatched": 6
+    "transcriptsInserted": 738,
+    "unmatched": 0
   },
   "imported": [
     {
-      "csvFileName": "Subulussalam.csv",
-      "shortId": 137,
-      "lectureId": "69aeb7dd5d9482a916811e2a",
-      "transcriptsInserted": 767,
+      "csvFileName": "362.csv",
+      "shortId": 362,
+      "lectureId": "69b12a943662715de3867b2d",
+      "transcriptsInserted": 81,
+      "duplicateShortIdInDb": false
+    },
+    {
+      "csvFileName": "363.csv",
+      "shortId": 363,
+      "lectureId": "69b12a943662715de3867b7f",
+      "transcriptsInserted": 533,
+      "duplicateShortIdInDb": false
+    },
+    {
+      "csvFileName": "364.csv",
+      "shortId": 364,
+      "lectureId": "69b12a943662715de3867d95",
+      "transcriptsInserted": 124,
       "duplicateShortIdInDb": false
     }
   ],
   "skipped": [
     {
-      "csvFileName": "╪º┘ä╪¬╪╣┘ä┘è┘é ╪╣┘ä┘ë ┘â╪¬╪º╪¿ ∩┤┐╪¬╪ú╪│┘è╪│ ╪º┘ä╪ú╪¡┘â╪º┘à ╪╣┘ä┘ë ┘à╪º ╪╡╪¡ ┘à┘å ╪«┘è╪▒ ╪º┘ä╪ú┘å╪º┘à ╪¿╪┤╪▒╪¡ ╪╣┘à╪»╪⌐ (2).csv",
-      "reason": "duplicate-transcript-stem"
-    },
-    {
-      "csvFileName": "╪º┘ä╪¬╪╣┘ä┘è┘é ╪╣┘ä┘ë ┘â╪¬╪º╪¿ ∩┤┐╪¬╪ú╪│┘è╪│ ╪º┘ä╪ú╪¡┘â╪º┘à ╪╣┘ä┘ë ┘à╪º ╪╡╪¡ ┘à┘å ╪«┘è╪▒ ╪º┘ä╪ú┘å╪º┘à ╪¿╪┤╪▒╪¡ ╪╣┘à╪»╪⌐ (3).csv",
-      "reason": "duplicate-transcript-stem"
-    },
-    {
-      "csvFileName": "╪º┘ä╪¬╪╣┘ä┘è┘é ╪╣┘ä┘ë ┘â╪¬╪º╪¿ ∩┤┐╪¬╪ú╪│┘è╪│ ╪º┘ä╪ú╪¡┘â╪º┘à ╪╣┘ä┘ë ┘à╪º ╪╡╪¡ ┘à┘å ╪«┘è╪▒ ╪º┘ä╪ú┘å╪º┘à ╪¿╪┤╪▒╪¡ ╪╣┘à╪»╪⌐.csv",
-      "reason": "duplicate-transcript-stem"
-    },
-    {
-      "csvFileName": "╪º┘ä╪¬╪╣┘ä┘è┘é ╪╣┘ä┘ë ┘â╪¬╪º╪¿ ╪¬╪ú╪│┘è╪│ ╪º┘ä╪ú╪¡┘â╪º┘à ╪╣┘ä┘ë ┘à╪º ╪╡╪¡ ┘à┘å ╪«┘è╪▒ ╪º┘ä╪ú┘å╪º┘à ╪¿╪┤╪▒╪¡ ╪╣┘à╪»╪⌐ (1).csv",
-      "reason": "duplicate-transcript-stem"
-    },
-    {
-      "csvFileName": "╪º┘ä╪¬╪╣┘ä┘è┘é ╪╣┘ä┘ë ┘â╪¬╪º╪¿ ╪¬╪ú╪│┘è╪│ ╪º┘ä╪ú╪¡┘â╪º┘à ╪╣┘ä┘ë ┘à╪º ╪╡╪¡ ┘à┘å ╪«┘è╪▒ ╪º┘ä╪ú┘å╪º┘à ╪¿╪┤╪▒╪¡ ╪╣┘à╪»╪⌐ (2).csv",
-      "reason": "duplicate-transcript-stem"
-    },
-    {
-      "csvFileName": "╪º┘ä╪¬╪╣┘ä┘è┘é ╪╣┘ä┘ë ┘â╪¬╪º╪¿ ╪¬╪ú╪│┘è╪│ ╪º┘ä╪ú╪¡┘â╪º┘à ╪╣┘ä┘ë ┘à╪º ╪╡╪¡ ┘à┘å ╪«┘è╪▒ ╪º┘ä╪ú┘å╪º┘à ╪¿╪┤╪▒╪¡ ╪╣┘à╪»╪⌐ (3).csv",
-      "reason": "duplicate-transcript-stem"
-    },
-    {
-      "csvFileName": "╪º┘ä╪¬╪╣┘ä┘è┘é ╪╣┘ä┘ë ┘â╪¬╪º╪¿ ╪¬╪ú╪│┘è╪│ ╪º┘ä╪ú╪¡┘â╪º┘à ╪╣┘ä┘ë ┘à╪º ╪╡╪¡ ┘à┘å ╪«┘è╪▒ ╪º┘ä╪ú┘å╪º┘à ╪¿╪┤╪▒╪¡ ╪╣┘à╪»╪⌐.csv",
-      "reason": "duplicate-transcript-stem"
-    },
-    {
-      "csvFileName": "AUD-20251208-WA0009.csv",
+      "csvFileName": "361.csv",
       "reason": "resume-skip-success"
     }
   ],
   "mongoUsage": {
     "dbStats": {
-      "dataSizeBytes": 20474467,
-      "storageSizeBytes": 6119424,
-      "indexSizeBytes": 5144576,
+      "dataSizeBytes": 39673574,
+      "storageSizeBytes": 17600512,
+      "indexSizeBytes": 14692352,
       "collections": 2,
-      "objects": 87531
+      "objects": 178538
     },
     "serverMemory": {
       "note": "serverStatus not available",

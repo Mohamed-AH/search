@@ -14,9 +14,12 @@ const port = Number(process.env.PORT || 4000);
 const mongoUri = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017";
 const dbName = process.env.MONGODB_DB || "audio_search_demo";
 const searchMode = process.env.SEARCH_MODE || "local"; // local | atlas
+const logSearches = String(process.env.LOG_SEARCHES || "true").toLowerCase() !== "false";
+const searchLogTtlDays = Number(process.env.SEARCH_LOG_TTL_DAYS || 30);
 
 let db;
 let indexesReady = false;
+let searchLogIndexesReady = false;
 const CONTEXT_WINDOW_SEC = Number(process.env.CONTEXT_WINDOW_SEC || 90);
 const CONTEXT_ITEMS = Number(process.env.CONTEXT_ITEMS || 2);
 
@@ -33,6 +36,18 @@ async function ensureLocalIndexes(database) {
   if (indexesReady || searchMode !== "local") return;
   await database.collection("transcripts").createIndex({ text: "text" });
   indexesReady = true;
+}
+
+async function ensureSearchLogIndexes(database) {
+  if (searchLogIndexesReady || !logSearches) return;
+  const collections = await database.listCollections({ name: "search_logs" }).toArray();
+  if (collections.length === 0) {
+    await database.createCollection("search_logs");
+  }
+  const logs = database.collection("search_logs");
+  await logs.createIndex({ createdAt: 1 }, { expireAfterSeconds: Math.max(1, Math.floor(searchLogTtlDays * 86400)) });
+  await logs.createIndex({ query: 1, createdAt: -1 });
+  searchLogIndexesReady = true;
 }
 
 function joinedProjection() {
@@ -251,6 +266,16 @@ function filterByTokenMatch(results, tokenInfo) {
   });
 }
 
+async function logSearch(database, payload) {
+  if (!logSearches) return;
+  try {
+    await ensureSearchLogIndexes(database);
+    await database.collection("search_logs").insertOne(payload);
+  } catch {
+    // best-effort logging only
+  }
+}
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
@@ -385,6 +410,24 @@ app.get("/search", async (req, res) => {
 
     const filteredResults = filterByTokenMatch(results, tokenInfo);
     const resultsWithContext = await enrichResultsWithContext(filteredResults, transcripts);
+
+    const topLectureIds = resultsWithContext
+      .map((item) => item.lectureId)
+      .filter(Boolean)
+      .map((id) => String(id))
+      .slice(0, 5);
+
+    logSearch(database, {
+      createdAt: new Date(),
+      query,
+      normalizedQuery: tokenInfo.normalized,
+      tokens: tokenInfo.tokens,
+      minShouldMatch: tokenInfo.minShouldMatch,
+      resultCount: resultsWithContext.length,
+      topLectureIds,
+      searchMode,
+      relevant: null,
+    });
 
     return res.render("index", {
       query,
