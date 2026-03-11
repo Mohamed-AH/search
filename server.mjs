@@ -1,10 +1,12 @@
-﻿import dotenv from "dotenv";
+import dotenv from "dotenv";
 dotenv.config({ path: ".env.local" });
 
 import express from "express";
 import path from "node:path";
+import crypto from "node:crypto";
 import { fileURLToPath } from "node:url";
 import { MongoClient, ObjectId } from "mongodb";
+import helmet from "helmet";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -16,12 +18,15 @@ const dbName = process.env.MONGODB_DB || "audio_search_demo";
 const searchMode = process.env.SEARCH_MODE || "local"; // local | atlas
 const logSearches = String(process.env.LOG_SEARCHES || "true").toLowerCase() !== "false";
 const searchLogTtlDays = Number(process.env.SEARCH_LOG_TTL_DAYS || 30);
+const maxQueryLength = Number(process.env.MAX_QUERY_LENGTH || 120);
+const minQueryLength = Number(process.env.MIN_QUERY_LENGTH || 1);
 
 let db;
 let indexesReady = false;
 let searchLogIndexesReady = false;
 const CONTEXT_WINDOW_SEC = Number(process.env.CONTEXT_WINDOW_SEC || 90);
 const CONTEXT_ITEMS = Number(process.env.CONTEXT_ITEMS || 2);
+const CSRF_COOKIE_NAME = "csrf_token";
 
 async function getDb() {
   if (db) return db;
@@ -30,6 +35,84 @@ async function getDb() {
   await client.connect();
   db = client.db(dbName);
   return db;
+}
+
+function parseCookies(req) {
+  const header = req.headers.cookie || "";
+  const parts = header.split(";");
+  const cookies = {};
+  for (const part of parts) {
+    const [rawKey, ...rest] = part.trim().split("=");
+    if (!rawKey) continue;
+    cookies[rawKey] = decodeURIComponent(rest.join("="));
+  }
+  return cookies;
+}
+
+function isSecureRequest(req) {
+  if (req.secure) return true;
+  const proto = req.headers["x-forwarded-proto"];
+  return proto === "https";
+}
+
+function setCsrfCookie(res, token, secure) {
+  const attrs = [
+    `${CSRF_COOKIE_NAME}=${encodeURIComponent(token)}`,
+    "Path=/",
+    "SameSite=Lax",
+  ];
+  if (secure) attrs.push("Secure");
+  res.setHeader("Set-Cookie", attrs.join("; "));
+}
+
+function issueCsrfToken(req, res) {
+  const token = crypto.randomBytes(24).toString("hex");
+  setCsrfCookie(res, token, isSecureRequest(req));
+  return token;
+}
+
+function sanitizeComment(value) {
+  return String(value || "")
+    .replace(/<[^>]*>/g, "")
+    .replace(/[\u0000-\u001F\u007F]/g, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
+function sanitizeSearchQuery(value) {
+  return String(value || "")
+    .replace(/<[^>]*>/g, "")
+    .replace(/[\u0000-\u001F\u007F]/g, "")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
+function validateSearchQuery(raw) {
+  const value = sanitizeSearchQuery(raw);
+  if (!value) return { ok: false, reason: "empty" };
+  if (value.length < minQueryLength) return { ok: false, reason: "too_short" };
+  if (value.length > maxQueryLength) return { ok: false, reason: "too_long" };
+  return { ok: true, value };
+}
+
+function rateLimit({ windowMs, max, message }) {
+  const hits = new Map();
+  return (req, res, next) => {
+    const now = Date.now();
+    const ip = req.headers["x-forwarded-for"]?.toString().split(",")[0]?.trim() || req.socket.remoteAddress || "unknown";
+    const record = hits.get(ip) || { count: 0, resetAt: now + windowMs };
+    if (now > record.resetAt) {
+      record.count = 0;
+      record.resetAt = now + windowMs;
+    }
+    record.count += 1;
+    hits.set(ip, record);
+    if (record.count > max) {
+      res.status(429).send(message || "Too many requests");
+      return;
+    }
+    next();
+  };
 }
 
 async function ensureLocalIndexes(database) {
@@ -280,28 +363,66 @@ async function logSearch(database, payload) {
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, "public")));
-app.use(express.urlencoded({ extended: false }));
+
+app.use(
+  helmet({
+    contentSecurityPolicy: {
+      directives: {
+        defaultSrc: ["'self'"],
+        scriptSrc: ["'self'"],
+        styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
+        fontSrc: ["'self'", "https://fonts.gstatic.com"],
+        imgSrc: ["'self'", "data:"],
+        connectSrc: ["'self'"],
+        objectSrc: ["'none'"],
+        baseUri: ["'self'"],
+        frameAncestors: ["'none'"],
+        upgradeInsecureRequests: [],
+      },
+    },
+    referrerPolicy: { policy: "strict-origin-when-cross-origin" },
+  })
+);
+
+app.use(express.urlencoded({ extended: false, limit: "5kb" }));
 app.use((_req, res, next) => {
   res.setHeader("Content-Type", "text/html; charset=utf-8");
+  res.setHeader("X-Content-Type-Options", "nosniff");
+  res.setHeader("Referrer-Policy", "strict-origin-when-cross-origin");
   next();
 });
 
-app.get("/", (_req, res) => {
+const globalLimiter = rateLimit({ windowMs: 60_000, max: 120, message: "Slow down" });
+app.use(globalLimiter);
+
+app.get("/health", (_req, res) => {
+  res.status(200).json({ status: "ok" });
+});
+
+app.get("/", (req, res) => {
+  const csrfToken = issueCsrfToken(req, res);
   res.render("index", {
     query: "",
     results: [],
     error: null,
     searched: false,
     searchLogId: null,
+    csrfToken,
   });
 });
 
-app.post("/search/feedback", async (req, res) => {
+app.post("/search/feedback", rateLimit({ windowMs: 60_000, max: 30, message: "Too many feedback requests" }), async (req, res) => {
   const logId = String(req.body?.logId || "").trim();
   const relevantRaw = String(req.body?.relevant || "").trim().toLowerCase();
   const relevant = relevantRaw === "true" ? true : relevantRaw === "false" ? false : null;
-  const commentRaw = String(req.body?.comment || "").trim();
+  const commentRaw = sanitizeComment(req.body?.comment || "");
   const comment = commentRaw.length > 300 ? commentRaw.slice(0, 300) : commentRaw;
+  const csrfToken = String(req.body?.csrfToken || "").trim();
+  const cookies = parseCookies(req);
+
+  if (!csrfToken || cookies[CSRF_COOKIE_NAME] !== csrfToken) {
+    return res.status(403).send("invalid");
+  }
 
   if (!logId || relevant === null || !ObjectId.isValid(logId)) {
     return res.status(400).send("invalid");
@@ -319,14 +440,24 @@ app.post("/search/feedback", async (req, res) => {
   }
 });
 
-app.get("/search", async (req, res) => {
-  const query = String(req.query.q || "").trim();
+app.get("/search", rateLimit({ windowMs: 60_000, max: 45, message: "Too many searches" }), async (req, res) => {
+  const queryCheck = validateSearchQuery(req.query.q);
+  if (!queryCheck.ok) {
+    const csrfToken = issueCsrfToken(req, res);
+    return res.render("index", {
+      query: String(req.query.q || ""),
+      results: [],
+      searched: true,
+      error: "search query invalid",
+      searchLogId: null,
+      csrfToken,
+    });
+  }
+
+  const query = queryCheck.value;
+  const logQuery = sanitizeSearchQuery(query);
   const queryVariants = buildQueryVariants(query);
   const tokenInfo = buildTokenQuery(query);
-
-  if (!query) {
-    return res.render("index", { query, results: [], error: null, searched: false, searchLogId: null });
-  }
 
   try {
     const database = await getDb();
@@ -423,14 +554,14 @@ app.get("/search", async (req, res) => {
     let results = [];
 
     if (searchMode === "atlas") {
-      results = await transcripts.aggregate(atlasPipeline).toArray();
+      results = await transcripts.aggregate(atlasPipeline, { maxTimeMS: 3000 }).toArray();
       if (results.length === 0) {
-        results = await transcripts.aggregate(regexFallbackPipeline).toArray();
+        results = await transcripts.aggregate(regexFallbackPipeline, { maxTimeMS: 3000 }).toArray();
       }
     } else {
-      results = await transcripts.aggregate(localTextPipeline).toArray();
+      results = await transcripts.aggregate(localTextPipeline, { maxTimeMS: 3000 }).toArray();
       if (results.length === 0) {
-        results = await transcripts.aggregate(regexFallbackPipeline).toArray();
+        results = await transcripts.aggregate(regexFallbackPipeline, { maxTimeMS: 3000 }).toArray();
       }
     }
 
@@ -445,7 +576,7 @@ app.get("/search", async (req, res) => {
 
     const searchLogId = await logSearch(database, {
       createdAt: new Date(),
-      query,
+      query: logQuery,
       normalizedQuery: tokenInfo.normalized,
       tokens: tokenInfo.tokens,
       minShouldMatch: tokenInfo.minShouldMatch,
@@ -455,14 +586,18 @@ app.get("/search", async (req, res) => {
       relevant: null,
     });
 
+    const csrfToken = issueCsrfToken(req, res);
+
     return res.render("index", {
       query,
       results: resultsWithContext,
       error: null,
       searched: true,
       searchLogId,
+      csrfToken,
     });
   } catch {
+    const csrfToken = issueCsrfToken(req, res);
     return res.render("index", {
       query,
       results: [],
@@ -472,6 +607,7 @@ app.get("/search", async (req, res) => {
           ? "search failed. check atlas search index and mongodb connection."
           : "search failed. check local mongodb container and imported data.",
       searchLogId: null,
+      csrfToken,
     });
   }
 });

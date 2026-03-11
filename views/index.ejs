@@ -565,7 +565,7 @@
         <div class="feedback-inline">
           <button type="button" class="feedback-toggle" aria-expanded="false">مشاركة رأيك في النتائج</button>
           <div class="feedback-panel">
-            <div class="feedback-form" data-logid="<%= searchLogId %>">
+            <div class="feedback-form" data-logid="<%= searchLogId %>" data-csrf="<%= csrfToken %>">
               <div class="feedback-actions">
                 <button type="button" class="feedback-btn" data-relevant="true">نتائج مفيدة</button>
                 <button type="button" class="feedback-btn" data-relevant="false">غير مفيدة</button>
@@ -691,32 +691,5 @@
     </footer>
 
     <script src="/client.js"></script>
-    <script>
-      (function () {
-        const menuToggle = document.getElementById("menuToggle");
-        const mobileNav = document.getElementById("mobileNav");
-        const backdrop = document.getElementById("mobileNavBackdrop");
-
-        function closeMenu() {
-          mobileNav.classList.remove("active");
-          backdrop.classList.remove("active");
-          document.body.style.overflow = "";
-        }
-
-        if (!menuToggle || !mobileNav || !backdrop) return;
-
-        menuToggle.addEventListener("click", function () {
-          const open = mobileNav.classList.toggle("active");
-          backdrop.classList.toggle("active", open);
-          document.body.style.overflow = open ? "hidden" : "";
-        });
-
-        backdrop.addEventListener("click", closeMenu);
-
-        mobileNav.querySelectorAll("a").forEach((link) => {
-          link.addEventListener("click", closeMenu);
-        });
-      })();
-    </script>
   </body>
 </html>

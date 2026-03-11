@@ -5,6 +5,9 @@ const feedbackPanel = document.querySelector(".feedback-panel");
 const feedbackForm = document.querySelector(".feedback-form");
 const feedbackStatus = document.querySelector(".feedback-status");
 const feedbackInline = document.querySelector(".feedback-inline");
+const menuToggle = document.getElementById("menuToggle");
+const mobileNav = document.getElementById("mobileNav");
+const backdrop = document.getElementById("mobileNavBackdrop");
 
 function setPlayerVisible(isVisible) {
   if (!playerWrap) return;
@@ -85,7 +88,8 @@ if (feedbackSend) {
   feedbackSend.addEventListener("click", async () => {
     if (!feedbackForm) return;
     const logId = feedbackForm.dataset.logid;
-    if (!logId || selectedRelevance === null) return;
+    const csrfToken = feedbackForm.dataset.csrf;
+    if (!logId || selectedRelevance === null || !csrfToken) return;
 
     const comment = feedbackForm.querySelector("textarea")?.value || "";
 
@@ -93,7 +97,7 @@ if (feedbackSend) {
       await fetch("/search/feedback", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams({ logId, relevant: selectedRelevance, comment }),
+        body: new URLSearchParams({ logId, relevant: selectedRelevance, comment, csrfToken }),
       });
 
       if (feedbackInline) {
@@ -106,6 +110,26 @@ if (feedbackSend) {
     } catch {
       // ignore feedback errors
     }
+  });
+}
+
+if (menuToggle && mobileNav && backdrop) {
+  function closeMenu() {
+    mobileNav.classList.remove("active");
+    backdrop.classList.remove("active");
+    document.body.style.overflow = "";
+  }
+
+  menuToggle.addEventListener("click", () => {
+    const open = mobileNav.classList.toggle("active");
+    backdrop.classList.toggle("active", open);
+    document.body.style.overflow = open ? "hidden" : "";
+  });
+
+  backdrop.addEventListener("click", closeMenu);
+
+  mobileNav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
   });
 }
 
